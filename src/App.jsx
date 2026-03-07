@@ -9,13 +9,14 @@ import Footer from "./components/Footer";
 import Event from "./pages/Event";
 import Hackathons from "./pages/Hackathons";
 import Loder from "./components/Loder"; // Import Loader
-import Sponsor from "./pages/Sponsor";
+import Sponsor from "./components/Sponsor";
 import Scroll from "./components/Scroll"; 
 import ProblemStatements from "./pages/Problems";
 import ProblemForm from "./pages/ProblemForm";
 import LoginForm from "./pages/LoginForm";
 import RegisterForm from "./pages/RegisterForm";
 import ProblemList from "./pages/ProblemList";
+import Gallery from "./pages/Gallery";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -48,6 +49,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm/>} />
         <Route path="/repos" element={<ProblemList/>} />
+        <Route path="/gallery" element={<Gallery/>} />
       </Routes>
       <Footer />
     </>

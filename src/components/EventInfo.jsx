@@ -6,14 +6,14 @@ const events = [
 id: 1,
 title: "Krutiverse Hackathon",
 subtitle: "A Great Fundraising Opportunity to Showcase Your Talent",
-date: "24 March, 2025",
+date: "24 March, 2026",
 
 about: [
 {
 heading: "About the Event",
 description: [
 "🚀 What is Hackathon Krutiverse?",
-"Hackathon Krutiverse is a 8-hour coding marathon where innovators, developers, designers, and problem-solvers collaborate to build impactful solutions.",
+"Hackathon Krutiverse is an 8-hour coding marathon where innovators, developers, designers, and problem-solvers collaborate to build impactful solutions.",
 "",
 "💡 Why Participate?",
 "- Solve real-world problems with cutting-edge technology",
@@ -31,34 +31,36 @@ highlights: [
 "Exciting Prizes & Recognition",
 "Innovative Challenges",
 "Networking Opportunities",
-"8 hours non stop coding"
+"8 Hours Non-Stop Coding"
 ],
 
 contacts: [
 { name: "Chhagan Rakhade", phone: "+919158396794" },
-{ name: "Himanshu Dhenge", phone: "+919322913858" }
+{ name: "Himanshu Dhenge", phone: "+919322913858" },
+{ name: "Aniket Kadu", phone: "+918767158314" },
+{ name: "Aditya Korde", phone: "+918446950836" }
 ]
+
 },
 
 {
 id: 2,
 title: "Project Expo",
-subtitle: "Showcase Your Innovative Projects",
-date: "24 March, 2025",
-registration:"https://forms.gle/x9t8waM5yNJdU6mC8",
+subtitle: "Showcase Your Innovative Technical Projects",
+date: "24 March, 2026",
 
 about: [
 {
 heading: "About the Event",
 description: [
 "🎯 What is Project Expo?",
-"Project Expo allows students to present innovative projects.",
+"Project Expo provides a platform for students to present their innovative technical projects and working prototypes.",
 "",
-"🔍 Why Participate?",
-"- Get evaluation from experts",
-"- Gain mentorship",
-"- Win prizes",
-"- Network with professionals"
+"💡 Why Participate?",
+"- Get your project evaluated by experts",
+"- Gain valuable feedback and mentorship",
+"- Showcase your innovation",
+"- Win exciting prizes"
 ],
 }
 ],
@@ -66,188 +68,204 @@ description: [
 highlights: [
 "Innovative Projects",
 "Expert Evaluation",
-"Networking",
+"Industry Interaction",
 "Exciting Prizes"
 ],
 
 contacts: [
-{ name: "Vishakha Ghatole", phone: "+918208212898"},
-{ name: "Nidhi Sharnagat", phone: "+919021138083"}
+{ name: "Tushar Gajekeshwar", phone: "+918805892426" },
+{ name: "Prajwal Mesare", phone: "+917709764347" },
+{ name: "Krushna Kayande", phone: "+918766007638" },
+{ name: "Shreyash Gahane", phone: "+918605251707" }
 ]
+
 },
 
 {
 id: 3,
 title: "E-Sports Championship",
-subtitle: "Battle in top-tier gaming tournaments featuring Valorant, BGMI, and Free Fire.",
-date: "25 March, 2025",
-registration:"https://forms.gle/FQ1y7L7nQoK75ZQY6",
+subtitle: "Battle in Top-Tier Gaming Tournaments",
+date: "25 March, 2026",
 
 about: [
 {
 heading: "About the Event",
 description: [
 "🎮 What is the E-Sports Championship?",
-"The E-Sports Championship brings together gaming enthusiasts for the ultimate competitive showdown.",
+"This event brings together gaming enthusiasts to compete in exciting tournaments.",
 "",
-"🔥 Why Participate?",
-"- Compete with skilled players",
-"- Use your own mobile internet",
-"- Play Valorant, BGMI, Free Fire",
+"🔥 Games Included",
+"- BGMI",
+"- Free Fire",
+"- Valorant",
+"",
+"💡 Why Participate?",
+"- Compete with skilled gamers",
 "- Win prizes and trophies",
-"- Meet pro gamers"
+"- Experience competitive gaming"
 ],
 }
 ],
 
 highlights: [
-"Battle Royale & FPS Matches",
+"Battle Royale Matches",
+"FPS Gaming Competition",
 "Cash Prizes",
-"Live Streaming",
-"Squad & Solo Mode",
-"Pro Gamer Showdowns"
+"Solo & Squad Mode",
+"Pro Gamer Competition"
 ],
 
 contacts: [
-{ name: "Priyanshu Patle", phone: "+917038836841" },
-{ name: "Dishant Janbandhu", phone: "+917517938702" }
+{ name: "Mahesh Ingle (BGMI)", phone: "+919623742970" },
+{ name: "Harshal Mogre (Free Fire)", phone: "+919579508742" },
+{ name: "Chetan Parse", phone: "" },
+{ name: "Priyanshu Patle", phone: "+917038836841" }
 ]
+
 },
 
 {
 id: 4,
-title: "Open Mic Talent Show",
-subtitle: "Showcase your creativity through poetry, comedy, music or storytelling.",
-date: "25 March, 2025",
+title: "Vibe Coding Challenge",
+subtitle: "Fast-paced Coding Competition",
+date: "25 March, 2026",
 
 about: [
 {
 heading: "About the Event",
 description: [
-"🎤 What is Open Mic?",
-"Open Mic is a creative stage where participants express their talents.",
+"💻 What is Vibe Coding?",
+"A competitive programming challenge where participants solve coding problems under time pressure.",
 "",
-"🌟 Why Participate?",
-"- Perform poetry, stand-up comedy, singing or storytelling",
-"- Express creativity in front of a live audience",
-"- Gain confidence and stage experience",
-"- Win exciting prizes"
+"💡 Why Participate?",
+"- Test your programming skills",
+"- Compete with other coders",
+"- Improve problem-solving ability"
 ],
 }
 ],
 
 highlights: [
-"Live Stage Performance",
-"Creative Expression",
-"Audience Interaction",
+"Competitive Programming",
+"Algorithmic Challenges",
+"Fast Problem Solving",
 "Exciting Prizes"
 ],
 
 contacts: [
-{ name: "Event Coordinator", phone: "+910000000000" }
+{ name: "Anuj Moon", phone: "+919156675249" },
+{ name: "Khushbu Khandait", phone: "+918080394319" },
+{ name: "Sudhanshu Kumar", phone: "+919699921161" },
+{ name: "Sachika Singh", phone: "+919594288342" }
 ]
+
 },
 
 {
 id: 5,
-title: "Reel & Short Film Presentation",
-subtitle: "Show your storytelling skills through creative reels and short films.",
-date: "25 March, 2025",
+title: "Open Mic Talent Show",
+subtitle: "Showcase Your Talent Through Poetry, Music & Comedy",
+date: "25 March, 2026",
 
 about: [
 {
 heading: "About the Event",
 description: [
-"🎬 What is Reel / Short Film Presentation?",
-"Participants create short films or reels showcasing creativity and storytelling.",
+"🎤 Open Mic provides a stage for students to showcase their talents.",
 "",
-"🎥 Why Participate?",
-"- Showcase video editing and storytelling skills",
-"- Present creative digital content",
-"- Gain recognition for filmmaking talent",
-"- Win prizes"
+"Participants can perform:",
+"- Poetry",
+"- Singing",
+"- Stand-up comedy",
+"- Storytelling"
+],
+}
+],
+
+highlights: [
+"Poetry & Storytelling",
+"Music Performances",
+"Stand-Up Comedy",
+"Creative Talent Showcase"
+],
+
+contacts: [
+{ name: "Sarang Kachare", phone: "+919763191362" },
+{ name: "Vedant Nanoti", phone: "+919960116568" },
+{ name: "Ritesh Krnewar", phone: "+919673904779" },
+{ name: "Mitali Kharabe", phone: "+918956903495" }
+]
+
+},
+
+{
+id: 6,
+title: "Reel & Short Film Presentation",
+subtitle: "Present Your Creative Video Stories",
+date: "25 March, 2026",
+
+about: [
+{
+heading: "About the Event",
+description: [
+"🎬 Participants present creative reels or short films.",
+"",
+"💡 Focus Areas:",
+"- Storytelling",
+"- Cinematography",
+"- Editing",
+"- Creativity"
 ],
 }
 ],
 
 highlights: [
 "Creative Storytelling",
+"Short Film Presentation",
 "Video Editing Skills",
-"Short Film Showcase",
-"Judging by Experts"
+"Judges Evaluation"
 ],
 
 contacts: [
-{ name: "Event Coordinator", phone: "+910000000000" }
+{ name: "Ram Dhote", phone: "+918208268304" },
+{ name: "Piyush Ambildhuke", phone: "+919923272412" },
+{ name: "Sudhanshu Rambhad", phone: "+919322143157" },
+{ name: "Yash Bhakre", phone: "" }
 ]
+
 },
 
 {
-id: 6,
+id: 7,
 title: "Ciphertext Treasure Hunt",
-subtitle: "Solve encrypted clues and uncover the hidden treasure.",
-date: "25 March, 2025",
+subtitle: "Solve Encrypted Clues to Find the Treasure",
+date: "25 March, 2026",
 
 about: [
 {
 heading: "About the Event",
 description: [
-"🔐 What is Ciphertext Treasure Hunt?",
-"Participants solve encrypted clues and puzzles to find hidden treasures.",
+"🧩 Ciphertext Treasure Hunt is a puzzle-based event.",
 "",
-"🧠 Why Participate?",
-"- Test logical thinking and problem solving",
-"- Decode encrypted messages",
-"- Work as a team",
-"- Experience a fun adventure"
+"Participants solve encrypted clues and riddles to reach the final treasure."
 ],
 }
 ],
 
 highlights: [
-"Puzzle Solving",
 "Cryptography Challenges",
+"Puzzle Solving",
 "Team Adventure",
 "Exciting Rewards"
 ],
 
 contacts: [
-{ name: "Event Coordinator", phone: "+910000000000" }
+{ name: "Anandi Sonune", phone: "+919588446815" },
+{ name: "Anupam Sarkar", phone: "+917588933314" },
+{ name: "Durvesh Buradkar", phone: "+919420476188" },
+{ name: "Divya Atram", phone: "+918010883231" }
 ]
-},
 
-{
-id: 7,
-title: "Vibe Coding Challenge",
-subtitle: "Solve coding problems quickly and compete with other programmers.",
-date: "25 March, 2025",
-
-about: [
-{
-heading: "About the Event",
-description: [
-"⚡ What is Vibe Coding?",
-"Vibe Coding is a fast-paced programming challenge where participants solve algorithmic problems.",
-"",
-"💻 Why Participate?",
-"- Test coding and logical thinking",
-"- Solve real programming problems",
-"- Compete with top coders",
-"- Win prizes"
-],
-}
-],
-
-highlights: [
-"Competitive Coding",
-"Algorithm Challenges",
-"Leaderboard Ranking",
-"Exciting Prizes"
-],
-
-contacts: [
-{ name: "Event Coordinator", phone: "+910000000000" }
-]
 }
 
 ];

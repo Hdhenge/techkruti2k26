@@ -1,18 +1,18 @@
 import React from "react";
 
 const sponsors = [
-  { id: 1, name: "CSI", logo: "CSI.jpg", website: "https://csiindia.org/" }
+  { id: 1, name: "CSI", logo: "/sponsors/CSI.jpg", website: "https://csiindia.org/" }
 
   
 ];
 
 const Sponsor = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-black py-20 relative overflow-hidden">
+    <div className="w-full min-h-screen bg-black py-20 px-6 relative overflow-hidden">
 
       {/* background glow */}
-      <div className="absolute w-[500px] h-[500px] bg-cyan-500/20 blur-[150px] top-10 left-10"></div>
-      <div className="absolute w-[500px] h-[500px] bg-purple-500/20 blur-[150px] bottom-10 right-10"></div>
+      <div className="absolute w-[500px] h-[500px] bg-cyan-500/20 blur-[150px]  left-10"></div>
+      <div className="absolute w-[500px] h-[500px] bg-purple-500/20 blur-[150px]  right-10"></div>
 
       {/* heading */}
       <h1 className="text-4xl md:text-5xl font-bold text-white mb-14 text-center tracking-wider">

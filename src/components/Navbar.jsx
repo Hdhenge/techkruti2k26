@@ -11,7 +11,7 @@ import {
   Home,
   Contact,
   Info,
-  Trophy,
+  BookImage,
 } from "lucide-react";
 
 const Navbar = () => {
@@ -45,7 +45,7 @@ const Navbar = () => {
     { name: "About", path: "/about", icon: <Info size={18} /> },
     { name: "Contact Us", path: "/contact", icon: <Contact size={18} /> },
     // { name: "Register Problem", path: "/ProblemForm", icon: <Code2 size={18} /> },
-    { name: "Sponsor", path: "/sponsor", icon: <Trophy size={18} /> },
+    { name: "Gallery", path: "/gallery", icon: <BookImage size={18} /> },
   ];
 
   useEffect(() => {

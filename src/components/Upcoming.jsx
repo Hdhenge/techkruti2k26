@@ -6,7 +6,7 @@ const events = [
   id: 1,
   title: "KrutiVerse Hackathon 2K25",
   description: "Compete in an intense 8-hour coding marathon to solve real-world challenges.",
-  img: "Hackthon.jpg",
+  img: "/event/hackathon.png",
   fee: "₹90 per Head",
   teamSize: "2-4 members",
   venue: "TGPCET campus",
@@ -18,7 +18,7 @@ const events = [
   id: 2,
   title: "Project Expo",
   description: "Showcase your innovative tech projects to industry leaders and investors.",
-  img: "Projects.jpg",
+  img: "/event/project-expo.png",
   fee: "₹200 per entry",
   teamSize: "2-3 members",
   venue: "Data Science Department",
@@ -30,7 +30,7 @@ const events = [
   id: 3,
   title: "E-Sports LAN Event",
   description: "Battle in top-tier gaming tournaments featuring BGMI and Free Fire.",
-  img: "pubg.jpg",
+  img: "/event/esport.png",
   fee: "₹250 per squad",
   teamSize: "4 members",
   venue: "TGPCET Campus",
@@ -42,7 +42,7 @@ const events = [
   id: 4,
   title: "Open Mic",
   description: "Showcase your talent and express your creativity on stage in this exciting Open Mic event.",
-  img: "Debate.jpg",
+  img: "/event/open mic.png",
   fee: "₹50 per participant",
   venue: "TGPCET campus",
   teamSize: "Solo",
@@ -66,7 +66,7 @@ const events = [
   id: 6,
   title: "Ciphertext Treasure Hunt",
   description: "Decode encrypted clues and solve puzzles to find the hidden treasure.",
-  img: "cipher.jpg",
+  img: "/event/treasure.png",
   fee: "₹150 entry",
   teamSize: "4 members",
   venue: "Mystery Room",
@@ -117,7 +117,7 @@ key={event.id}
 className="group flex flex-col rounded-2xl overflow-hidden backdrop-blur-xl bg-white/5 border border-cyan-400/20 hover:border-cyan-400 transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,255,255,0.4)]"
 >
 
-<div className="relative h-52 overflow-hidden">
+<div className="relative h-60 overflow-hidden">
 
 <img
 src={event.img}

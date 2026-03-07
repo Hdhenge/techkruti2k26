@@ -1,83 +1,126 @@
 import React from "react";
-import { FaFacebook, FaYoutube, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaYoutube, FaLinkedin, FaInstagram, FaMapMarkerAlt, FaCalendarAlt, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-black text-white overflow-hidden">
+    <footer className="bg-black text-white relative overflow-hidden">
 
-      {/* ARC REACTOR GLOW BACKGROUND */}
-      <div className="absolute inset-0 flex justify-center items-center opacity-20">
-        <div className="relative w-80 h-80 rounded-full border border-cyan-500 animate-spin-slow">
+      {/* Background Glow */}
+      <div className="absolute w-[450px] h-[450px] bg-cyan-500/10 blur-[140px] -left-20 top-0"></div>
+      <div className="absolute w-[450px] h-[450px] bg-purple-500/10 blur-[140px] -right-20 bottom-0"></div>
 
-          {/* Inner Rings */}
-          <div className="absolute inset-10 rounded-full border border-cyan-400 animate-pulse"></div>
-          <div className="absolute inset-20 rounded-full border border-blue-400"></div>
+      <div className="max-w-7xl mx-auto px-6 py-16 relative z-10">
 
-          {/* Reactor Core */}
-          <div className="absolute inset-28 rounded-full bg-cyan-400 blur-xl"></div>
+        {/* GRID */}
+        <div className="grid md:grid-cols-4 gap-10">
+
+          {/* About */}
+          <div>
+            <h2 className="text-2xl font-bold text-cyan-400 tracking-widest">
+              TECHKRUTI 2K26
+            </h2>
+
+            <p className="text-gray-400 text-sm mt-4 leading-relaxed">
+              TechKruti is the annual technical festival organized by the 
+              CSE & Data Science department of TGPCET Mohgav. 
+              Experience innovation, coding and tech competitions.
+            </p>
+          </div>
+
+          {/* Event Details */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              Event Details
+            </h3>
+
+            <div className="space-y-4 text-gray-400 text-sm">
+
+              <p className="flex items-center gap-2">
+                <FaCalendarAlt className="text-cyan-400"/>
+                24 - 25 March 2026
+              </p>
+
+              <p className="flex items-center gap-2">
+                <FaMapMarkerAlt className="text-cyan-400"/>
+                TGPCET, Mohgav, Nagpur
+              </p>
+
+
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              Quick Links
+            </h3>
+
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li><a href="#" className="hover:text-cyan-400">Home</a></li>
+              <li><a href="#" className="hover:text-cyan-400">About</a></li>
+              <li><a href="#" className="hover:text-cyan-400">Events</a></li>
+              <li><a href="#" className="hover:text-cyan-400">Sponsors</a></li>
+              <li><a href="#" className="hover:text-cyan-400">Contact</a></li>
+            </ul>
+          </div>
+
+          {/* Map */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              Event Location
+            </h3>
+
+            <div className="rounded-lg overflow-hidden border border-gray-700">
+              <iframe
+                title="tgpcet-location"
+                src="https://www.google.com/maps?q=TGPCET%20Mohgaon%20Nagpur&output=embed"
+                className="w-full h-40"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
         </div>
-      </div>
 
-      {/* MAIN CONTENT */}
-      <div className="relative z-10 py-10 px-6 text-center">
+        {/* Social Media */}
+        <div className="flex justify-center gap-6 mt-12 text-xl">
 
-        {/* Title */}
-        <h2 className="text-2xl font-bold text-cyan-400 tracking-widest">
-          TECHKRUTI 2K25
-        </h2>
-
-        <p className="text-gray-400 text-sm mt-2">
-          CSE & Data Science | TGPCET, Mohgav
-        </p>
-
-        {/* Navigation */}
-        <nav className="mt-6 flex justify-center gap-6 text-cyan-300 text-sm">
-          <a href="#" className="hover:text-white transition">Home</a>
-          <a href="#" className="hover:text-white transition">About</a>
-          <a href="#" className="hover:text-white transition">Sponsors</a>
-          <a href="#" className="hover:text-white transition">Contact</a>
-        </nav>
-
-        {/* Social Icons */}
-        <div className="flex justify-center gap-6 mt-6 text-xl">
-
-          <a href="#" className="hover:text-cyan-400 transition transform hover:scale-125">
-            <FaFacebook />
+          <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-blue-600 transition transform hover:scale-110">
+            <FaFacebook/>
           </a>
 
-          <a href="#" className="hover:text-red-500 transition transform hover:scale-125">
-            <FaYoutube />
+          <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-red-600 transition transform hover:scale-110">
+            <FaYoutube/>
           </a>
 
-          <a href="#" className="hover:text-blue-400 transition transform hover:scale-125">
-            <FaLinkedin />
+          <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-blue-400 transition transform hover:scale-110">
+            <FaLinkedin/>
           </a>
 
           <a
             href="https://www.instagram.com/ds_tgpcet/?hl=en"
-            className="hover:text-pink-400 transition transform hover:scale-125"
+            className="bg-white/10 p-3 rounded-full hover:bg-pink-500 transition transform hover:scale-110"
           >
-            <FaInstagram />
+            <FaInstagram/>
           </a>
 
         </div>
 
         {/* Divider */}
-        <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent mx-auto mt-8"></div>
+        <div className="border-t border-gray-800 mt-10 pt-6 text-center">
 
-        {/* Copyright */}
-        <p className="text-gray-500 text-xs mt-4">
-          © 2025 TECHKRUTI. All Rights Reserved.
-        </p>
+          <p className="text-gray-500 text-sm">
+            © 2026 TECHKRUTI | TGPCET Mohgav
+          </p>
 
-        {/* <p className="text-gray-500 text-xs">
-          Developed by
-          <span className="text-cyan-400 font-semibold ml-1">
-            Chhagan Rakhade
-          </span>
-        </p> */}
+          <p className="text-gray-600 text-xs mt-1">
+            Developed with ❤️ by TechKruti Team
+          </p>
+
+        </div>
 
       </div>
+
     </footer>
   );
 };
