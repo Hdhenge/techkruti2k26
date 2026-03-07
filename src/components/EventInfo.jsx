@@ -125,7 +125,7 @@ contacts: [
 },
 
 {
-id: 4,
+id: 7,
 title: "Vibe Coding Challenge",
 subtitle: "Fast-paced Coding Competition",
 date: "25 March, 2026",
@@ -162,7 +162,7 @@ contacts: [
 },
 
 {
-id: 5,
+id: 4,
 title: "Open Mic Talent Show",
 subtitle: "Showcase Your Talent Through Poetry, Music & Comedy",
 date: "25 March, 2026",
@@ -199,7 +199,7 @@ contacts: [
 },
 
 {
-id: 6,
+id: 5,
 title: "Reel & Short Film Presentation",
 subtitle: "Present Your Creative Video Stories",
 date: "25 March, 2026",
@@ -236,7 +236,7 @@ contacts: [
 },
 
 {
-id: 7,
+id: 6,
 title: "Ciphertext Treasure Hunt",
 subtitle: "Solve Encrypted Clues to Find the Treasure",
 date: "25 March, 2026",
