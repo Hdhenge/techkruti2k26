@@ -60,7 +60,7 @@ const events = [
   venue: "TGPCET campus",
   date: "25th March",
   time: "10:00 AM - 5:00 PM",
-  registration:""
+  registration:"https://forms.gle/fnNGchSssi7usPyY7"
 },
 {
   id: 6,
