@@ -1,422 +1,788 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const events = [
-{
-id: 1,
-title: "Krutiverse Hackathon",
-subtitle: "A Great Fundraising Opportunity to Showcase Your Talent",
-date: "24 March, 2026",
-
-about: [
-{
-heading: "About the Event",
-description: [
-"🚀 What is Hackathon Krutiverse?",
-"Hackathon Krutiverse is an 8-hour coding marathon where innovators, developers, designers, and problem-solvers collaborate to build impactful solutions.",
-"",
-"💡 Why Participate?",
-"- Solve real-world problems with cutting-edge technology",
-"- Work in teams and showcase problem-solving skills",
-"- Gain mentorship from industry experts",
-"- Win exciting prizes and recognition",
-"- Network with like-minded tech enthusiasts"
-],
-}
-],
-
-highlights: [
-"Creativity & Functionality",
-"Team Collaboration",
-"Exciting Prizes & Recognition",
-"Innovative Challenges",
-"Networking Opportunities",
-"8 Hours Non-Stop Coding"
-],
-
-contacts: [
-{ name: "Aditya Korde", phone: "+918446950836" },
-{ name: "Aniket Kadu", phone: "+918767158314" },
-{ name: "Chhagan Rakhade", phone: "+919158396794" },
-{ name: "Himanshu Dhenge", phone: "+919322913858" }
-]
-
-},
-
-{
-id: 2,
-title: "Project Expo",
-subtitle: "Showcase Your Innovative Technical Projects",
-date: "24 March, 2026",
-
-about: [
-{
-heading: "About the Event",
-description: [
-"🎯 What is Project Expo?",
-"Project Expo provides a platform for students to present their innovative technical projects and working prototypes.",
-"",
-"💡 Why Participate?",
-"- Get your project evaluated by experts",
-"- Gain valuable feedback and mentorship",
-"- Showcase your innovation",
-"- Win exciting prizes"
-],
-}
-],
-
-highlights: [
-"Innovative Projects",
-"Expert Evaluation",
-"Industry Interaction",
-"Exciting Prizes"
-],
-
-contacts: [
-{ name: "Tushar Gajekeshwar", phone: "+918805892426" },
-{ name: "Prajwal Mesare", phone: "+917709764347" },
-{ name: "Krushna Kayande", phone: "+918766007638" },
-{ name: "Shreyash Gahane", phone: "+918605251707" }
-]
-
-},
-
-{
-id: 3,
-title: "E-Sports Championship",
-subtitle: "Battle in Top-Tier Gaming Tournaments",
-date: "25 March, 2026",
-
-about: [
-{
-heading: "About the Event",
-description: [
-"🎮 What is the E-Sports Championship?",
-"This event brings together gaming enthusiasts to compete in exciting tournaments.",
-"",
-"🔥 Games Included",
-"- BGMI",
-"- Free Fire",
-"",
-"💡 Why Participate?",
-"- Compete with skilled gamers",
-"- Win prizes and trophies",
-"- Experience competitive gaming"
-],
-}
-],
-
-highlights: [
-"Battle Royale Matches",
-"FPS Gaming Competition",
-"Cash Prizes",
-"Squad Mode",
-"Pro Gamer Competition"
-],
-
-contacts: [
-{ name: "Mahesh Ingle (BGMI)", phone: "+919623742970" },
-{ name: "Harshal Mogre (Free Fire)", phone: "+919579508742" },
-{ name: "Chetan Parse", phone: "+919322476335" },
-{ name: "Priyanshu Patle", phone: "+917038836841" }
-]
-
-},
-
-{
-id: 7,
-title: "Vibe Coding Challenge",
-subtitle: "Fast-paced Coding Competition",
-date: "25 March, 2026",
-
-about: [
-{
-heading: "About the Event",
-description: [
-"💻 What is Vibe Coding?",
-"A competitive programming challenge where participants solve coding problems under time pressure.",
-"",
-"💡 Why Participate?",
-"- Test your programming skills",
-"- Compete with other coders",
-"- Improve problem-solving ability"
-],
-}
-],
-
-highlights: [
-"Competitive Programming",
-"Algorithmic Challenges",
-"Fast Problem Solving",
-"Exciting Prizes"
-],
-
-contacts: [
-{ name: "Anuj Moon", phone: "+919156675249" },
-{ name: "Khushbu Khandait", phone: "+918080394319" },
-{ name: "Sudhanshu Kumar", phone: "+919699921161" },
-{ name: "Sachika Singh", phone: "+919594288342" }
-]
-
-},
-
-{
-id: 4,
-title: "Open Mic Talent Show",
-subtitle: "Showcase Your Talent Through Poetry, Music & Comedy",
-date: "25 March, 2026",
-
-about: [
-{
-heading: "About the Event",
-description: [
-"🎤 Open Mic provides a stage for students to showcase their talents.",
-"",
-"Participants can perform:",
-"- Poetry",
-"- Singing",
-"- Stand-up comedy",
-"- Storytelling"
-],
-}
-],
-
-highlights: [
-"Poetry & Storytelling",
-"Music Performances",
-"Stand-Up Comedy",
-"Creative Talent Showcase"
-],
-
-contacts: [
-{ name: "Sarang Kachare", phone: "+919763191362" },
-{ name: "Vedant Nanoti", phone: "+919960116568" },
-{ name: "Ritesh Krnewar", phone: "+919673904779" },
-{ name: "Mitali Kharabe", phone: "+918956903495" }
-]
-
-},
-
-{
-id: 5,
-title: "Reel & Short Film Presentation",
-subtitle: "Present Your Creative Video Stories",
-date: "25 March, 2026",
-
-about: [
-{
-heading: "About the Event",
-description: [
-"🎬 Participants present creative reels or short films.",
-"",
-"💡 Focus Areas:",
-"- Storytelling",
-"- Cinematography",
-"- Editing",
-"- Creativity"
-],
-}
-],
-
-highlights: [
-"Creative Storytelling",
-"Short Film Presentation",
-"Video Editing Skills",
-"Judges Evaluation"
-],
-
-contacts: [
-{ name: "Ram Dhote", phone: "+918208268304" },
-{ name: "Piyush Ambildhuke", phone: "+919923272412" },
-{ name: "Sudhanshu Rambhad", phone: "+919322143157" },
-{ name: "Yash Bhakre", phone: "" }
-]
-
-},
-
-{
-id: 6,
-title: "Ciphertext Treasure Hunt",
-subtitle: "Solve Encrypted Clues to Find the Treasure",
-date: "25 March, 2026",
-
-about: [
-{
-heading: "About the Event",
-description: [
-"🧩 Ciphertext Treasure Hunt is a puzzle-based event.",
-"",
-"Participants solve encrypted clues and riddles to reach the final treasure."
-],
-}
-],
-
-highlights: [
-"Cryptography Challenges",
-"Puzzle Solving",
-"Team Adventure",
-"Exciting Rewards"
-],
-
-contacts: [
-{ name: "Anandi Sonune", phone: "+919588446815" },
-{ name: "Anupam Sarkar", phone: "+917588933314" },
-{ name: "Durvesh Buradkar", phone: "+919420476188" },
-{ name: "Divya Atram", phone: "+918010883231" }
-]
-
-}
-
+  {
+    id: 1,
+    title: "Krutiverse Hackathon",
+    subtitle: "A Great Fundraising Opportunity to Showcase Your Talent",
+    date: "24 March, 2026",
+    accentFrom: "#f97316", accentTo: "#a855f7",
+    about: [
+      {
+        heading: "About the Event",
+        description: [
+          "🚀 What is Hackathon Krutiverse?",
+          "Hackathon Krutiverse is an 8-hour coding marathon where innovators, developers, designers, and problem-solvers collaborate to build impactful solutions.",
+          "",
+          "💡 Why Participate?",
+          "- Solve real-world problems with cutting-edge technology",
+          "- Work in teams and showcase problem-solving skills",
+          "- Gain mentorship from industry experts",
+          "- Win exciting prizes and recognition",
+          "- Network with like-minded tech enthusiasts",
+        ],
+      },
+    ],
+    highlights: [
+      "Creativity & Functionality",
+      "Team Collaboration",
+      "Exciting Prizes & Recognition",
+      "Innovative Challenges",
+      "Networking Opportunities",
+      "8 Hours Non-Stop Coding",
+    ],
+    contacts: [
+      { name: "Aditya Korde",     phone: "+918446950836" },
+      { name: "Aniket Kadu",      phone: "+918767158314" },
+      { name: "Chhagan Rakhade",  phone: "+919158396794" },
+      { name: "Himanshu Dhenge",  phone: "+919322913858" },
+    ],
+  },
+  {
+    id: 2,
+    title: "Project Expo",
+    subtitle: "Showcase Your Innovative Technical Projects",
+    date: "24 March, 2026",
+    accentFrom: "#06b6d4", accentTo: "#6366f1",
+    about: [
+      {
+        heading: "About the Event",
+        description: [
+          "🎯 What is Project Expo?",
+          "Project Expo provides a platform for students to present their innovative technical projects and working prototypes.",
+          "",
+          "💡 Why Participate?",
+          "- Get your project evaluated by experts",
+          "- Gain valuable feedback and mentorship",
+          "- Showcase your innovation",
+          "- Win exciting prizes",
+        ],
+      },
+    ],
+    highlights: [
+      "Innovative Projects",
+      "Expert Evaluation",
+      "Industry Interaction",
+      "Exciting Prizes",
+    ],
+    contacts: [
+      { name: "Tushar Gajekeshwar", phone: "+918805892426" },
+      { name: "Prajwal Mesare",     phone: "+917709764347" },
+      { name: "Krushna Kayande",    phone: "+918766007638" },
+      { name: "Shreyash Gahane",    phone: "+918605251707" },
+    ],
+  },
+  {
+    id: 3,
+    title: "E-Sports Championship",
+    subtitle: "Battle in Top-Tier Gaming Tournaments",
+    date: "25 March, 2026",
+    accentFrom: "#10b981", accentTo: "#06b6d4",
+    about: [
+      {
+        heading: "About the Event",
+        description: [
+          "🎮 What is the E-Sports Championship?",
+          "This event brings together gaming enthusiasts to compete in exciting tournaments.",
+          "",
+          "🔥 Games Included",
+          "- BGMI",
+          "- Free Fire",
+          "",
+          "💡 Why Participate?",
+          "- Compete with skilled gamers",
+          "- Win prizes and trophies",
+          "- Experience competitive gaming",
+        ],
+      },
+    ],
+    highlights: [
+      "Battle Royale Matches",
+      "FPS Gaming Competition",
+      "Cash Prizes",
+      "Squad Mode",
+      "Pro Gamer Competition",
+    ],
+    contacts: [
+      { name: "Mahesh Ingle (BGMI)",      phone: "+919623742970" },
+      { name: "Harshal Mogre (Free Fire)", phone: "+919579508742" },
+      { name: "Chetan Parse",             phone: "+919322476335" },
+      { name: "Priyanshu Patle",          phone: "+917038836841" },
+    ],
+  },
+  {
+    id: 7,
+    title: "Vibe Coding Challenge",
+    subtitle: "Fast-paced Coding Competition",
+    date: "25 March, 2026",
+    accentFrom: "#f59e0b", accentTo: "#f97316",
+    about: [
+      {
+        heading: "About the Event",
+        description: [
+          "💻 What is Vibe Coding?",
+          "A competitive programming challenge where participants solve coding problems under time pressure.",
+          "",
+          "💡 Why Participate?",
+          "- Test your programming skills",
+          "- Compete with other coders",
+          "- Improve problem-solving ability",
+        ],
+      },
+    ],
+    highlights: [
+      "Competitive Programming",
+      "Algorithmic Challenges",
+      "Fast Problem Solving",
+      "Exciting Prizes",
+    ],
+    contacts: [
+      { name: "Anuj Moon",       phone: "+919156675249" },
+      { name: "Khushbu Khandait",phone: "+918080394319" },
+      { name: "Sudhanshu Kumar", phone: "+919699921161" },
+      { name: "Sachika Singh",   phone: "+919594288342" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Open Mic Talent Show",
+    subtitle: "Showcase Your Talent Through Poetry, Music & Comedy",
+    date: "25 March, 2026",
+    accentFrom: "#ec4899", accentTo: "#f97316",
+    about: [
+      {
+        heading: "About the Event",
+        description: [
+          "🎤 Open Mic provides a stage for students to showcase their talents.",
+          "",
+          "Participants can perform:",
+          "- Poetry",
+          "- Singing",
+          "- Stand-up comedy",
+          "- Storytelling",
+        ],
+      },
+    ],
+    highlights: [
+      "Poetry & Storytelling",
+      "Music Performances",
+      "Stand-Up Comedy",
+      "Creative Talent Showcase",
+    ],
+    contacts: [
+      { name: "Sarang Kachare", phone: "+919763191362" },
+      { name: "Vedant Nanoti",  phone: "+919960116568" },
+      { name: "Ritesh Krnewar", phone: "+919673904779" },
+      { name: "Mitali Kharabe", phone: "+918956903495" },
+    ],
+  },
+  {
+    id: 5,
+    title: "Reel & Short Film",
+    subtitle: "Present Your Creative Video Stories",
+    date: "25 March, 2026",
+    accentFrom: "#a855f7", accentTo: "#ec4899",
+    about: [
+      {
+        heading: "About the Event",
+        description: [
+          "🎬 Participants present creative reels or short films.",
+          "",
+          "💡 Focus Areas:",
+          "- Storytelling",
+          "- Cinematography",
+          "- Editing",
+          "- Creativity",
+        ],
+      },
+    ],
+    highlights: [
+      "Creative Storytelling",
+      "Short Film Presentation",
+      "Video Editing Skills",
+      "Judges Evaluation",
+    ],
+    contacts: [
+      { name: "Ram Dhote",         phone: "+918208268304" },
+      { name: "Piyush Ambildhuke", phone: "+919923272412" },
+      { name: "Sudhanshu Rambhad", phone: "+919322143157" },
+      { name: "Yash Bhakre",       phone: "" },
+    ],
+  },
+  {
+    id: 6,
+    title: "Ciphertext Treasure Hunt",
+    subtitle: "Solve Encrypted Clues to Find the Treasure",
+    date: "25 March, 2026",
+    accentFrom: "#facc15", accentTo: "#f97316",
+    about: [
+      {
+        heading: "About the Event",
+        description: [
+          "🧩 Ciphertext Treasure Hunt is a puzzle-based event.",
+          "",
+          "Participants solve encrypted clues and riddles to reach the final treasure.",
+        ],
+      },
+    ],
+    highlights: [
+      "Cryptography Challenges",
+      "Puzzle Solving",
+      "Team Adventure",
+      "Exciting Rewards",
+    ],
+    contacts: [
+      { name: "Anandi Sonune",  phone: "+919588446815" },
+      { name: "Anupam Sarkar",  phone: "+917588933314" },
+      { name: "Durvesh Buradkar",phone: "+919420476188" },
+      { name: "Divya Atram",    phone: "+918010883231" },
+    ],
+  },
 ];
 
+/* ── Parse description lines ─────────────────────────────────── */
+const renderLine = (line, i) => {
+  if (line === "") return <div key={i} style={{ height: 12 }} />;
+  const isBullet = line.startsWith("- ");
+  const isHeader = line.match(/^[🚀💡🎯🔥🎮💻🎤🎬🧩]/u);
+  return (
+    <p
+      key={i}
+      style={{
+        fontSize: "clamp(13px, 2.4vw, 15px)",
+        color: isHeader
+          ? "rgba(255,255,255,0.75)"
+          : isBullet
+          ? "rgba(255,255,255,0.45)"
+          : "rgba(255,255,255,0.5)",
+        fontWeight: isHeader ? 700 : 400,
+        letterSpacing: isHeader ? "0.08em" : "0.03em",
+        lineHeight: 1.75,
+        paddingLeft: isBullet ? 16 : 0,
+        fontFamily: "'Rajdhani', sans-serif",
+        marginBottom: 2,
+      }}
+    >
+      {isBullet ? `→ ${line.slice(2)}` : line}
+    </p>
+  );
+};
+
+/* ── Main Component ──────────────────────────────────────────── */
 const EventInfo = () => {
+  const { id } = useParams();
+  const event = events.find((e) => e.id === parseInt(id));
 
-const { id } = useParams();
-const event = events.find((event) => event.id === parseInt(id));
+  if (!event) {
+    return (
+      <div
+        style={{
+          minHeight: "100svh",
+          background: "#050508",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          fontFamily: "'Rajdhani', sans-serif",
+          color: "rgba(255,255,255,0.3)",
+          fontSize: "clamp(1rem, 4vw, 1.5rem)",
+          letterSpacing: "0.2em",
+          textTransform: "uppercase",
+          gap: 20,
+        }}
+      >
+        Event Not Found
+        <Link
+          to="/"
+          style={{
+            fontSize: 13,
+            letterSpacing: "0.3em",
+            color: "#f97316",
+            textDecoration: "none",
+          }}
+        >
+          ← Back to Home
+        </Link>
+      </div>
+    );
+  }
 
-if (!event) {
-return <h2 className="text-center text-white">Event not found</h2>;
-}
+  const { accentFrom, accentTo } = event;
 
-return (
+  return (
+    <>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap"
+        rel="stylesheet"
+      />
 
-<div className="text-white mt-20 min-h-screen px-6 py-8 flex flex-col items-center bg-black">
+      <style>{`
+        *, *::before, *::after { box-sizing: border-box; }
 
-<div className="w-full max-w-5xl flex flex-col items-center space-y-12">
+        .ev-root {
+          position: relative;
+          min-height: 100svh;
+          background: #050508;
+          overflow: hidden;
+          font-family: 'Rajdhani', sans-serif;
+          color: #fff;
+          isolation: isolate;
+        }
 
-{/* Header */}
-<div className="text-center space-y-4">
+        /* Noise */
+        .ev-root::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+          opacity: 0.022;
+          pointer-events: none;
+          z-index: 0;
+        }
 
-<h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-{event.title}
-</h1>
+        /* Scanlines */
+        .ev-root::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background-image: repeating-linear-gradient(
+            to bottom,
+            transparent, transparent 3px,
+            rgba(255,255,255,0.01) 3px, rgba(255,255,255,0.01) 4px
+          );
+          pointer-events: none;
+          z-index: 0;
+        }
 
-<p className="text-lg text-gray-300">{event.subtitle}</p>
+        /* Orbs */
+        .ev-orb {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(100px);
+          pointer-events: none;
+          z-index: 0;
+        }
+        .ev-orb1 {
+          width: clamp(300px, 55vw, 700px);
+          height: clamp(300px, 55vw, 700px);
+          top: -15%; left: -10%;
+          opacity: 0.13;
+          animation: orbDrift1 20s ease-in-out infinite;
+        }
+        .ev-orb2 {
+          width: clamp(200px, 40vw, 550px);
+          height: clamp(200px, 40vw, 550px);
+          bottom: -10%; right: -8%;
+          opacity: 0.12;
+          animation: orbDrift2 24s ease-in-out infinite;
+        }
 
-<p className="text-blue-400 text-lg font-semibold">
-🗓️ {event.date}
-</p>
+        @keyframes orbDrift1 {
+          0%,100% { transform: translate(0,0) scale(1); }
+          50%      { transform: translate(3%,5%) scale(1.06); }
+        }
+        @keyframes orbDrift2 {
+          0%,100% { transform: translate(0,0); }
+          50%      { transform: translate(-4%,-3%); }
+        }
 
-</div>
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(24px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
 
-{/* Register Button */}
-{event.registration && (
+        /* Inner */
+        .ev-inner {
+          position: relative;
+          z-index: 2;
+          max-width: 900px;
+          margin: 0 auto;
+          padding: clamp(80px, 12vw, 120px) clamp(20px, 5vw, 48px) clamp(60px, 8vw, 100px);
+          display: flex;
+          flex-direction: column;
+          gap: clamp(40px, 6vw, 64px);
+        }
 
-<a
-href={event.registration}
-target="_blank"
-rel="noopener noreferrer"
-className="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 
-hover:scale-110 hover:shadow-[0_0_25px_rgba(168,85,247,0.9)] 
-transition-all duration-300 font-semibold"
->
+        /* Back link */
+        .ev-back {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          text-decoration: none;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.35em;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.25);
+          transition: color 0.25s;
+          animation: fadeUp 0.6s ease both;
+        }
+        .ev-back:hover { color: rgba(255,255,255,0.65); }
 
-🚀 Register Now
+        /* Hero */
+        .ev-hero {
+          text-align: center;
+          animation: fadeUp 0.7s 0.05s ease both;
+        }
 
-</a>
 
-)}
+        .ev-eyebrow {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          font-size: clamp(9px, 2vw, 11px);
+          font-weight: 700;
+          letter-spacing: 0.38em;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.2);
+          margin-bottom: 14px;
+        }
 
-{/* Event Details */}
-<div className="w-full max-w-3xl bg-white/5 backdrop-blur-xl border border-gray-700 rounded-2xl p-8">
+        .ev-eyebrow-line {
+          width: 30px; height: 1px;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15));
+        }
+        .ev-eyebrow-line.r {
+          background: linear-gradient(90deg, rgba(255,255,255,0.15), transparent);
+        }
 
-<h2 className="text-3xl font-bold text-center text-green-400 mb-6">
-Event Details
-</h2>
+        .ev-title {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: clamp(2.4rem, 10vw, 5.5rem);
+          letter-spacing: 0.05em;
+          line-height: 0.92;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin-bottom: 16px;
+        }
 
-{event.about.map((section, index) => (
+        .ev-subtitle {
+          font-size: clamp(13px, 2.5vw, 16px);
+          color: rgba(255,255,255,0.38);
+          letter-spacing: 0.06em;
+          max-width: 560px;
+          margin: 0 auto 14px;
+          line-height: 1.65;
+        }
 
-<div key={index}>
+        .ev-date-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(255,255,255,0.08);
+          border-radius: 100px;
+          padding: 6px 18px;
+          font-size: clamp(11px, 2vw, 13px);
+          font-weight: 600;
+          letter-spacing: 0.18em;
+          color: rgba(255,255,255,0.4);
+          text-transform: uppercase;
+        }
 
-{section.description.map((line, i) => (
+        .date-dot {
+          width: 6px; height: 6px;
+          border-radius: 50%;
+          animation: pulse 2s ease-in-out infinite;
+        }
 
-<p key={i} className="text-gray-300 text-lg mb-2">
-{line}
-</p>
+        @keyframes pulse {
+          0%,100% { opacity:1; transform:scale(1); }
+          50%      { opacity:0.4; transform:scale(0.7); }
+        }
 
-))}
+        /* Section card */
+        .ev-card {
+          background: rgba(255,255,255,0.025);
+          border: 1px solid rgba(255,255,255,0.07);
+          border-radius: 16px;
+          padding: clamp(24px, 5vw, 40px);
+          backdrop-filter: blur(12px);
+          animation: fadeUp 0.7s ease both;
+          position: relative;
+          overflow: hidden;
+        }
 
-</div>
+        .ev-card::before {
+          content: "";
+          position: absolute;
+          top: 0; left: 0; right: 0;
+          height: 1px;
+        }
 
-))}
+        .ev-section-label {
+          font-size: clamp(9px, 1.8vw, 10px);
+          font-weight: 700;
+          letter-spacing: 0.4em;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.22);
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 20px;
+        }
 
-</div>
+        .ev-section-label::after {
+          content: "";
+          flex: 1; height: 1px;
+          background: linear-gradient(90deg, rgba(255,255,255,0.08), transparent);
+        }
 
-{/* Highlights */}
-<div className="w-full max-w-4xl">
+        /* Highlights grid */
+        .ev-highlights-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
+          gap: clamp(10px, 2.5vw, 16px);
+        }
 
-<h2 className="text-3xl font-bold text-center text-yellow-400 mb-8">
-🌟 Key Highlights
-</h2>
+        .ev-highlight-item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: clamp(12px, 2.5vw, 16px);
+          background: rgba(255,255,255,0.03);
+          border: 1px solid rgba(255,255,255,0.06);
+          border-radius: 10px;
+          font-size: clamp(12px, 2.2vw, 14px);
+          font-weight: 600;
+          letter-spacing: 0.06em;
+          color: rgba(255,255,255,0.55);
+          transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+        }
 
-<div className="grid md:grid-cols-2 gap-6">
+        .ev-highlight-item:hover {
+          border-color: rgba(255,255,255,0.14);
+          color: rgba(255,255,255,0.85);
+          background: rgba(255,255,255,0.05);
+          transform: translateY(-2px);
+        }
 
-{event.highlights.map((highlight, index) => (
+        .ev-highlight-dot {
+          width: 6px; height: 6px;
+          border-radius: 50%;
+          flex-shrink: 0;
+        }
 
-<div
-key={index}
-className="p-6 bg-white/5 border border-gray-700 rounded-xl
-hover:scale-105 hover:border-cyan-400
-hover:shadow-[0_0_20px_rgba(34,211,238,0.6)]
-transition-all duration-300"
->
+        /* Contacts grid */
+        .ev-contacts-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+          gap: clamp(10px, 2.5vw, 16px);
+        }
 
-{highlight}
+        .ev-contact-card {
+          padding: clamp(14px, 3vw, 20px);
+          background: rgba(255,255,255,0.025);
+          border: 1px solid rgba(255,255,255,0.06);
+          border-radius: 12px;
+          transition: border-color 0.25s, background 0.25s, transform 0.25s;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
 
-</div>
+        .ev-contact-card:hover {
+          border-color: rgba(255,255,255,0.12);
+          background: rgba(255,255,255,0.04);
+          transform: translateY(-2px);
+        }
 
-))}
+        .ev-contact-name {
+          font-size: clamp(12px, 2.2vw, 14px);
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.65);
+        }
 
-</div>
+        .ev-contact-phone {
+          font-size: clamp(12px, 2vw, 13px);
+          letter-spacing: 0.05em;
+          color: rgba(255,255,255,0.3);
+          text-decoration: none;
+          font-weight: 600;
+          transition: color 0.2s;
+        }
 
-</div>
+        .ev-contact-phone:hover { color: rgba(255,255,255,0.7); }
 
-{/* Contacts */}
-<div className="w-full max-w-2xl text-center bg-white/5 border border-gray-700 rounded-2xl p-8">
+        /* Register CTA */
+        .ev-register-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 14px 36px;
+          border-radius: 100px;
+          font-family: 'Rajdhani', sans-serif;
+          font-size: clamp(13px, 2.5vw, 15px);
+          font-weight: 700;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #fff;
+          text-decoration: none;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-<h2 className="text-3xl font-bold text-pink-400 mb-6">
-📱 Contact Coordinators
-</h2>
+        .ev-register-btn:hover {
+          transform: translateY(-3px);
+        }
+      `}</style>
 
-<div className="grid md:grid-cols-2 gap-4">
+      <div className="ev-root">
+        {/* Orbs */}
+        <div
+          className="ev-orb ev-orb1"
+          style={{ background: `radial-gradient(circle, ${accentFrom}, transparent 70%)` }}
+        />
+        <div
+          className="ev-orb ev-orb2"
+          style={{ background: `radial-gradient(circle, ${accentTo}, transparent 70%)` }}
+        />
 
-{event.contacts.map((contact, index) => (
+        <div className="ev-inner">
 
-<div
-key={index}
-className="p-4 bg-black border border-gray-700 rounded-lg
-hover:border-pink-500 hover:scale-105
-hover:shadow-[0_0_20px_rgba(236,72,153,0.7)]
-transition-all duration-300"
->
+          {/* Back */}
+          <Link to="/" className="ev-back">
+            ← Back to Home
+          </Link>
 
-<p className="text-blue-400 font-semibold">
-{contact.name}
-</p>
+          {/* Hero */}
+          <div className="ev-hero">
+            <div className="ev-emoji-badge">{event.emoji}</div>
 
-<a
-href={`tel:${contact.phone}`}
-className="text-gray-300 hover:text-cyan-400 transition"
->
+            <div className="ev-eyebrow">
+              <span className="ev-eyebrow-line" />
+              TechKruti 2K26
+              <span className="ev-eyebrow-line r" />
+            </div>
 
-{contact.phone}
+            <h1
+              className="ev-title"
+              style={{ backgroundImage: `linear-gradient(135deg, #fff 20%, ${accentFrom} 60%, ${accentTo} 100%)` }}
+            >
+              {event.title}
+            </h1>
 
-</a>
+            <p className="ev-subtitle">{event.subtitle}</p>
 
-</div>
+            <div className="ev-date-pill">
+              <span
+                className="date-dot"
+                style={{ background: accentFrom, boxShadow: `0 0 8px ${accentFrom}` }}
+              />
+              {event.date}
+            </div>
+          </div>
 
-))}
+          {/* Register */}
+          {event.registration && (
+            <div style={{ textAlign: "center", animation: "fadeUp 0.7s 0.1s ease both" }}>
+              <a
+                href={event.registration}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ev-register-btn"
+                style={{
+                  backgroundImage: `linear-gradient(135deg, ${accentFrom}, ${accentTo})`,
+                  boxShadow: `0 4px 24px ${accentFrom}44`,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = `0 8px 36px ${accentFrom}77`;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = `0 4px 24px ${accentFrom}44`;
+                }}
+              >
+                Register Now →
+              </a>
+            </div>
+          )}
 
-</div>
+          {/* About */}
+          <div
+            className="ev-card"
+            style={{ animationDelay: "0.12s" }}
+          >
+            <div
+              className="ev-card"
+              style={{
+                position: "absolute",
+                top: 0, left: 0, right: 0,
+                height: "1px",
+                backgroundImage: `linear-gradient(90deg, transparent, ${accentFrom}88, ${accentTo}88, transparent)`,
+                border: "none",
+                borderRadius: 0,
+                padding: 0,
+                animation: "none",
+              }}
+            />
+            <style>{`
+              .ev-card-about::before {
+                background: linear-gradient(90deg, transparent, ${accentFrom}66, ${accentTo}66, transparent) !important;
+              }
+            `}</style>
+            <div className="ev-card ev-card-about" style={{ border: "none", padding: 0, background: "transparent", animation: "none" }}>
+              <div className="ev-section-label">About the Event</div>
+              {event.about.map((section, si) =>
+                section.description.map((line, i) => renderLine(line, `${si}-${i}`))
+              )}
+            </div>
+          </div>
 
-</div>
+          {/* Highlights */}
+          <div className="ev-card" style={{ animationDelay: "0.18s" }}>
+            <div className="ev-section-label">Key Highlights</div>
+            <div className="ev-highlights-grid">
+              {event.highlights.map((h, i) => (
+                <div key={i} className="ev-highlight-item">
+                  <span
+                    className="ev-highlight-dot"
+                    style={{
+                      background: `linear-gradient(135deg, ${accentFrom}, ${accentTo})`,
+                      boxShadow: `0 0 6px ${accentFrom}88`,
+                    }}
+                  />
+                  {h}
+                </div>
+              ))}
+            </div>
+          </div>
 
-</div>
+          {/* Contacts */}
+          <div className="ev-card" style={{ animationDelay: "0.24s" }}>
+            <div className="ev-section-label">Contact Coordinators</div>
+            <div className="ev-contacts-grid">
+              {event.contacts.map((c, i) => (
+                <div key={i} className="ev-contact-card">
+                  <span
+                    className="ev-contact-name"
+                    style={{
+                      background: `linear-gradient(135deg, ${accentFrom}, ${accentTo})`,
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                  >
+                    {c.name}
+                  </span>
+                  {c.phone ? (
+                    <a href={`tel:${c.phone}`} className="ev-contact-phone">
+                      {c.phone}
+                    </a>
+                  ) : (
+                    <span className="ev-contact-phone" style={{ opacity: 0.3 }}>—</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
 
-</div>
-
-);
-
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default EventInfo;
