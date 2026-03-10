@@ -8,6 +8,7 @@ const events = [
     subtitle: "A Great Fundraising Opportunity to Showcase Your Talent",
     date: "24 March, 2026",
     accentFrom: "#f97316", accentTo: "#a855f7",
+    registration: "https://forms.gle/XghiHw85MWDSuBNJ6",
     about: [
       {
         heading: "About the Event",
@@ -45,6 +46,7 @@ const events = [
     subtitle: "Showcase Your Innovative Technical Projects",
     date: "24 March, 2026",
     accentFrom: "#06b6d4", accentTo: "#6366f1",
+     registration: "https://forms.gle/fvdqevFSYk9bhBqJ6",
     about: [
       {
         heading: "About the Event",
@@ -79,6 +81,7 @@ const events = [
     subtitle: "Battle in Top-Tier Gaming Tournaments",
     date: "25 March, 2026",
     accentFrom: "#10b981", accentTo: "#06b6d4",
+    registration: "https://forms.gle/7ptdP8uYdvVZtf8F8",
     about: [
       {
         heading: "About the Event",
@@ -117,6 +120,7 @@ const events = [
     subtitle: "Fast-paced Coding Competition",
     date: "25 March, 2026",
     accentFrom: "#f59e0b", accentTo: "#f97316",
+    registration: "https://forms.gle/Y7Yydv2j4DbyTr979",
     about: [
       {
         heading: "About the Event",
@@ -150,6 +154,7 @@ const events = [
     subtitle: "Showcase Your Talent Through Poetry, Music & Comedy",
     date: "25 March, 2026",
     accentFrom: "#ec4899", accentTo: "#f97316",
+    registration: "https://forms.gle/n3EFvmZ6FNuVXjDo8",
     about: [
       {
         heading: "About the Event",
@@ -183,6 +188,7 @@ const events = [
     subtitle: "Present Your Creative Video Stories",
     date: "25 March, 2026",
     accentFrom: "#a855f7", accentTo: "#ec4899",
+    registration: "https://forms.gle/fnNGchSssi7usPyY7",
     about: [
       {
         heading: "About the Event",
@@ -216,6 +222,7 @@ const events = [
     subtitle: "Solve Encrypted Clues to Find the Treasure",
     date: "25 March, 2026",
     accentFrom: "#facc15", accentTo: "#f97316",
+    registration: "https://forms.gle/WY2MdvM2Suqx3Lxp9",
     about: [
       {
         heading: "About the Event",
@@ -723,7 +730,8 @@ const EventInfo = () => {
                 background: linear-gradient(90deg, transparent, ${accentFrom}66, ${accentTo}66, transparent) !important;
               }
             `}</style>
-            <div className="ev-card ev-card-about" style={{ border: "none", padding: 0, background: "transparent", animation: "none" }}>
+            <div className="ev-card ev-card-about" style={{ border: "none", paddingTop: "20px",
+    paddingLeft: "20px", background: "transparent", animation: "none" }}>
               <div className="ev-section-label">About the Event</div>
               {event.about.map((section, si) =>
                 section.description.map((line, i) => renderLine(line, `${si}-${i}`))

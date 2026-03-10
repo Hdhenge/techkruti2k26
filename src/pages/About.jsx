@@ -51,7 +51,7 @@ const whyJoin = [
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
-  show:   { opacity: 1, y: 0 },
+  show: { opacity: 1, y: 0 },
 };
 
 const About = () => (
@@ -397,7 +397,7 @@ const About = () => (
         >
           <div className="ab-eyebrow">
             <span className="ab-eyebrow-line l" />
-            TGPCET · CSE Data Science Dept · Otur
+            TGPCET · CSE Data Science Dept · mohgaon
             <span className="ab-eyebrow-line r" />
           </div>
 
@@ -510,7 +510,7 @@ const About = () => (
           <p className="ab-banner-sub">
             Be part of the biggest tech event at TGPCET. Register now before seats fill up.
           </p>
-          <Link to="/event/1" className="ab-banner-btn">
+          <Link to="/#upcoming" className="ab-banner-btn">
             Explore Events →
           </Link>
           <p className="ab-banner-date">March 24–25, 2026 · TGPCET Campus</p>

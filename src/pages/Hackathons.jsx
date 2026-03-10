@@ -12,7 +12,7 @@ const coordinators = [
 
 const details = [
   { icon: "📅", label: "Date",       value: "24th March, 2026" },
-  { icon: "⏰", label: "Time",       value: "9:00 AM – 4:00 PM" },
+  { icon: "⏰", label: "Time",       value: "9:00 AM – 5:00 PM" },
   { icon: "📍", label: "Venue",      value: "TGPCET Campus" },
   { icon: "💰", label: "Entry Fee",  value: "₹90 per head" },
   { icon: "👥", label: "Team Size",  value: "2 – 4 members" },
@@ -410,10 +410,10 @@ const TechverseHackathon = () => (
           </h1>
 
           {/* Association */}
-          <div className="hk-assoc">
+          {/* <div className="hk-assoc">
             <span className="hk-assoc-label">In Association With</span>
             <img src="Dev.jpg" alt="DevCult Logo" className="hk-assoc-logo" />
-          </div>
+          </div> */}
 
           <p className="hk-tagline">
             <strong>Where Innovation Meets Execution!</strong><br />

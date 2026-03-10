@@ -424,10 +424,10 @@ const Gallery = () => {
           </motion.div>
 
           {/* count */}
-          <p className="gl-count">
+          {/* <p className="gl-count">
             Showing {filtered.length} photo{filtered.length !== 1 ? "s" : ""} ·{" "}
             {activeCat?.label}
-          </p>
+          </p> */}
 
           {/* ── Masonry Grid ── */}
           <AnimatePresence mode="wait">
@@ -450,7 +450,7 @@ const Gallery = () => {
                     src={img.src}
                     alt={img.category}
                     loading="lazy"
-                    style={{ display: imgLoaded[img.id] ? "block" : "none" }}
+                    style={{ display: imgLoaded[img.id] ? "block" : "" }}
                     onLoad={() => setImgLoaded((prev) => ({ ...prev, [img.id]: true }))}
                   />
                   <div className="gl-item-overlay">

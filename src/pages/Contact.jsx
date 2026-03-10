@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 const supportTeam = [
   { id: 1, name: "Chhagan Rakhade",  role: "Registration Technical Support", email: "chhaganrakhade7@gmail.com",    phone: "+91 9158396794" },
   { id: 2, name: "Himanshu Dhenge",  role: "Judging & Participation Tech",    email: "himanshudhenge4@gmail.com",    phone: "+91 9322913858" },
-  { id: 3, name: "Shubham Kopare",   role: "Judging Tech",                    email: "shubhamkopare2004@gmail.com",  phone: "+91 8485029672" },
-  { id: 4, name: "Gagan Zade",       role: "Registration Technical Support",  email: "zadegagan17@gmail.com",        phone: "+91 9689477797" },
-  { id: 5, name: "Priyanshu Patle",  role: "E-Sport Coordinator",             email: "priyanshupatle2@gmail.com",    phone: "+91 7038836841" },
-  { id: 6, name: "Aditya Korde",     role: "E-Sport Coordinator",             email: "amdk282005@gmail.com",         phone: "+91 8446950836" },
-  { id: 7, name: "Sarang Kachare",   role: "Registration Technical Support",  email: "sarangkachare111@gmail.com",   phone: "+91 9325489326" },
+  { id: 3, name: "Aditya Korde",     role: "E-Sport Coordinator",             email: "amdk282005@gmail.com",         phone: "+91 8446950836" },
+  { id: 4, name: "Priyanshu Patle",  role: "E-Sport Coordinator",             email: "priyanshupatle2@gmail.com",    phone: "+91 7038836841" },
+  { id: 5, name: "Ram Dhote",     role: "E-Sport Coordinator",             email: "dhoteram68@gmail.com",         phone: "+91 8208268304" },
+  { id: 6, name: "Sarang Kachare",   role: "Registration Technical Support",  email: "sarangkachare111@gmail.com",   phone: "+91 9325489326" },
 ];
 
 /* rotate accent colors per card */
