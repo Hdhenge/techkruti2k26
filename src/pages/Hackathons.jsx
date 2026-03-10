@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const coordinators = [
   { name: "Chhagan Rakhade",  phone: "+919158396794" },
-  { name: "Shubham Kopare",   phone: "+918485029672" },
   { name: "Himanshu Dhenge",  phone: "+919322913858" },
-  { name: "Gagan Zade",       phone: "+919689477797" },
+  { name: "Ram Dhote",       phone: "+918208268304" },
+  { name: "Aditya Korde",   phone: "+918446950836" },
   { name: "Sarang Kachare",   phone: "+919325489326" },
   { name: "Vedant Nanoti",    phone: "+919960116568" },
 ];

@@ -8,6 +8,8 @@ const supportTeam = [
   { id: 4, name: "Priyanshu Patle",  role: "E-Sport Coordinator",             email: "priyanshupatle2@gmail.com",    phone: "+91 7038836841" },
   { id: 5, name: "Ram Dhote",     role: "E-Sport Coordinator",             email: "dhoteram68@gmail.com",         phone: "+91 8208268304" },
   { id: 6, name: "Sarang Kachare",   role: "Registration Technical Support",  email: "sarangkachare111@gmail.com",   phone: "+91 9325489326" },
+  { id: 7, name: "Vedant Nanoti",   role: "Registration Technical Support",  email: "vedant.max005@gmail.com",   phone: "+919960116568" },
+  { id: 7, name: "Sudhanshu kumar",   role: "Judging & Participation Tech",  email: "Sudhanshukumar0430@gmail.com",   phone: "+91 96999 21161" },
 ];
 
 /* rotate accent colors per card */
