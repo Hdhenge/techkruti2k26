@@ -7,7 +7,6 @@ const Countdown = () => {
   const getTimeRemaining = () => {
     const now = new Date().getTime();
     const difference = targetDate - now;
-
     return {
       days: Math.max(0, Math.floor(difference / (1000 * 60 * 60 * 24))),
       hours: Math.max(0, Math.floor((difference / (1000 * 60 * 60)) % 24)),
@@ -22,142 +21,175 @@ const Countdown = () => {
     const interval = setInterval(() => {
       setTimeLeft(getTimeRemaining());
     }, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
+  // Pre-generate stable particle positions to avoid layout shift
+  const particles = Array.from({ length: 40 }, (_, i) => ({
+    left: `${(i * 2.5) % 100}%`,
+    delay: `${(i * 0.3) % 8}s`,
+    duration: `${6 + (i % 5)}s`,
+  }));
+
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+    <div className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black px-4 py-12">
 
       {/* 🌌 Cyber Grid Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(#0ff1_1px,transparent_1px),linear-gradient(90deg,#0ff1_1px,transparent_1px)] bg-[size:40px_40px] opacity-10"></div>
+      <div
+        className="absolute inset-0 opacity-10 pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(#0ff1 1px, transparent 1px), linear-gradient(90deg, #0ff1 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
+      />
 
-      {/* ✨ Floating Particles */}
-      <div className="absolute inset-0">
-        {[...Array(50)].map((_, i) => (
+      {/* ✨ Floating Particles — clipped to container */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {particles.map((p, i) => (
           <span
             key={i}
-            className="particle"
             style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${i * 0.2}s`
+              position: "absolute",
+              bottom: "-10px",
+              left: p.left,
+              width: "3px",
+              height: "3px",
+              background: "#00ffff",
+              borderRadius: "50%",
+              animation: `float ${p.duration} ${p.delay} linear infinite`,
             }}
-          ></span>
+          />
         ))}
       </div>
 
       {/* 🚀 Content */}
-      <div className="relative z-10 text-center px-6">
+      <div className="relative z-10 text-center w-full max-w-4xl mx-auto">
 
-        {/* Title */}
-        <h3 className="text-xl sm:text-3xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 animate-text-glow">
-          NATIONAL LEVEL TECH FEST
+        {/* Subtitle */}
+        <h3
+          className="text-sm sm:text-lg md:text-2xl font-bold tracking-widest uppercase"
+          style={{
+            background: "linear-gradient(90deg, #facc15, #f97316)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            animation: "textGlow 2s ease-in-out infinite",
+          }}
+        >
+          National Level Tech Fest
         </h3>
 
-        <h1 className="text-6xl sm:text-8xl font-extrabold mt-4">
-
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 animate-gradient">
+        {/* Main Title */}
+        <h1 className="mt-3 leading-tight">
+          <span
+            className="block sm:inline text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold"
+            style={{
+              background: "linear-gradient(90deg, #c084fc, #f472b6, #f87171)",
+              backgroundSize: "200%",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              animation: "gradient 6s linear infinite",
+            }}
+          >
             TECHKRUTI
           </span>
-
-          <span className="ml-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-green-400 animate-gradient-reverse">
+          <span
+            className="block sm:inline sm:ml-3 md:ml-4 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold"
+            style={{
+              background: "linear-gradient(90deg, #22d3ee, #60a5fa, #4ade80)",
+              backgroundSize: "200%",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              animation: "gradient 6s linear infinite reverse",
+            }}
+          >
             2K26
           </span>
-
         </h1>
 
-        <p className="mt-4 text-lg text-cyan-300 max-w-3xl mx-auto">
-          Organized by CSE (Data Science) Department In Association with CSI,
-          TGPCET Nagpur Mohgaon – An Autonomous Institute
+        {/* Description */}
+        <p className="mt-4 text-xs sm:text-sm md:text-base text-cyan-300 max-w-xl mx-auto leading-relaxed px-2">
+          Organized by CSE (Data Science) Department · In Association with CSI
+          <br className="hidden sm:block" />
+          <span className="sm:hidden"> · </span>
+          TGPCET Nagpur Mohgaon — An Autonomous Institute
         </p>
 
-        <h2 className="mt-4 text-purple-400 text-xl">
+        <p className="mt-3 text-purple-400 text-sm sm:text-base md:text-xl font-medium tracking-wide">
           TechKruti 2K26 Begins In
-        </h2>
+        </p>
 
-        {/* ⏳ Countdown */}
-        <div className="flex flex-wrap justify-center gap-6 mt-12">
-
+        {/* ⏳ Countdown Cards */}
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mt-8 sm:mt-10">
           {Object.entries(timeLeft).map(([unit, value], index) => (
             <div
               key={index}
-              className="group relative w-28 h-28 sm:w-36 sm:h-36 flex items-center justify-center
-              bg-white/5 backdrop-blur-lg border border-cyan-400/30 rounded-2xl
-              shadow-[0_0_20px_rgba(0,255,255,0.2)]
-              hover:shadow-[0_0_40px_rgba(0,255,255,0.9)]
-              transition-all duration-500 transform hover:-translate-y-3"
+              className="group flex flex-col items-center justify-center
+                w-20 h-20
+                sm:w-28 sm:h-28
+                md:w-32 md:h-32
+                lg:w-36 lg:h-36
+                rounded-2xl
+                backdrop-blur-lg
+                transition-all duration-500
+                hover:-translate-y-2"
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(0,255,255,0.25)",
+                boxShadow: "0 0 18px rgba(0,255,255,0.15)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 36px rgba(0,255,255,0.7)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 18px rgba(0,255,255,0.15)";
+              }}
             >
-
-              <div className="flex flex-col items-center">
-
-                <span className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
-                  {value}
-                </span>
-
-                <span className="text-xs uppercase text-cyan-300 tracking-wider mt-1">
-                  {unit}
-                </span>
-
-              </div>
-
+              <span
+                className="text-2xl sm:text-3xl md:text-4xl font-bold tabular-nums"
+                style={{
+                  background: "linear-gradient(180deg, #f472b6, #a855f7)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                {String(value).padStart(2, "0")}
+              </span>
+              <span className="text-[10px] sm:text-xs uppercase tracking-widest text-cyan-300 mt-1">
+                {unit}
+              </span>
             </div>
           ))}
-
         </div>
 
-        {/* 📅 Date */}
-        <p className="mt-10 text-green-300 text-lg">
-          March 24–25, 2026 | TGPCET Campus
+        {/* 📅 Date & Venue */}
+        <p className="mt-8 text-green-300 text-sm sm:text-base md:text-lg font-medium tracking-wide">
+          March 24–25, 2026 &nbsp;|&nbsp; TGPCET Campus
         </p>
 
       </div>
 
-      {/* 🎨 Animations */}
-      <style jsx global>{`
-
-        .particle{
-          position:absolute;
-          bottom:-10px;
-          width:3px;
-          height:3px;
-          background:#00ffff;
-          border-radius:50%;
-          animation:float 8s linear infinite;
+      {/* 🎨 Global Animations */}
+      <style>{`
+        @keyframes float {
+          0%   { transform: translateY(0);      opacity: 0; }
+          15%  { opacity: 1; }
+          100% { transform: translateY(-100vh); opacity: 0; }
         }
 
-        @keyframes float{
-          0%{transform:translateY(0);opacity:0}
-          20%{opacity:1}
-          100%{transform:translateY(-100vh);opacity:0}
+        @keyframes gradient {
+          0%   { background-position: 0% center; }
+          50%  { background-position: 100% center; }
+          100% { background-position: 0% center; }
         }
 
-        @keyframes gradient{
-          0%{background-position:0%}
-          50%{background-position:100%}
-          100%{background-position:0%}
+        @keyframes textGlow {
+          0%, 100% { filter: drop-shadow(0 0 4px rgba(255,220,0,0.3)); }
+          50%       { filter: drop-shadow(0 0 14px rgba(255,220,0,0.8)); }
         }
-
-        .animate-gradient{
-          background-size:200%;
-          animation:gradient 6s linear infinite;
-        }
-
-        .animate-gradient-reverse{
-          background-size:200%;
-          animation:gradient 6s linear infinite reverse;
-        }
-
-        @keyframes textGlow{
-          0%,100%{text-shadow:0 0 10px rgba(255,255,255,0.3)}
-          50%{text-shadow:0 0 25px rgba(255,255,255,0.8)}
-        }
-
-        .animate-text-glow{
-          animation:textGlow 2s ease-in-out infinite;
-        }
-
       `}</style>
-
     </div>
   );
 };

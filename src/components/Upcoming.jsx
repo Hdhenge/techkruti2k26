@@ -12,7 +12,7 @@ const events = [
   venue: "TGPCET campus",
   date: "24th March",
   time: "9:00 AM - 5:00 PM",
-  registration:""
+  registration:"https://forms.gle/XghiHw85MWDSuBNJ6"
 },
 {
   id: 2,
@@ -24,7 +24,7 @@ const events = [
   venue: "Data Science Department",
   date: "24th March",
   time: "10:00 AM - 3:00 PM",
-  registration:""
+  registration:"https://forms.gle/fvdqevFSYk9bhBqJ6"
 },
 {
   id: 3,
@@ -36,26 +36,26 @@ const events = [
   venue: "TGPCET Campus",
   date: "25th March",
   time: "9:00 AM - 4:00 PM",
-  registration:""
+  registration:"https://forms.gle/7ptdP8uYdvVZtf8F8"
 },
 {
   id: 4,
   title: "Open Mic",
   description: "Showcase your talent and express your creativity on stage in this exciting Open Mic event.",
   img: "/event/open mic.png",
-  fee: "₹50 per participant",
+  fee: "free",
   venue: "TGPCET campus",
   teamSize: "Solo",
   date: "25th March",
   time: "11:00 AM - 3:00 PM",
-  registration:""
+  registration:"https://forms.gle/n3EFvmZ6FNuVXjDo8"
 },
 {
   id: 5,
   title: "Real Making / Short Film Presentation",
   description: "Turn your ideas into a creative reel or short film.",
   img: "MemeBattle.jpg",
-  fee: "₹50 per participant",
+  fee: "free",
   teamSize: "Solo / Team",
   venue: "TGPCET campus",
   date: "25th March",
@@ -67,24 +67,24 @@ const events = [
   title: "Ciphertext Treasure Hunt",
   description: "Decode encrypted clues and solve puzzles to find the hidden treasure.",
   img: "/event/treasure.png",
-  fee: "₹80 entry",
+  fee: "free",
   teamSize: "4 members",
   venue: "Mystery Room",
   date: "25 March",
   time: "10:00 AM - 2:00 PM",
-  registration:""
+  registration:"https://forms.gle/WY2MdvM2Suqx3Lxp9"
 },
 {
   id: 7,
   title: "Vibe - Coding",
   description: "Decode encrypted clues and solve puzzles to find the hidden treasure.",
   img: "cipher.jpg",
-  fee: "₹200",
+  fee: "₹",
   teamSize: "2-4 members",
   venue: "TGPCET campus",
   date: "25 March",
   time: "10:00 AM - 4:00 PM",
-  registration:""
+  registration:"https://forms.gle/Y7Yydv2j4DbyTr979"
 }
 ];
 
@@ -176,7 +176,7 @@ Details
 </button>
 
 <button
-// onClick={() => window.open(event.registration, "_blank")}
+onClick={() => window.open(event.registration, "_blank")}
 className="flex-1 bg-gradient-to-r from-pink-500 to-purple-600 py-2 rounded-lg font-semibold hover:scale-105 transition"
 >
 Register

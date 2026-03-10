@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import { FaFacebook, FaYoutube, FaLinkedin, FaInstagram, FaMapMarkerAlt, FaCalendarAlt, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
@@ -21,8 +22,8 @@ const Footer = () => {
             </h2>
 
             <p className="text-gray-400 text-sm mt-4 leading-relaxed">
-              TechKruti is the annual technical festival organized by the 
-              CSE & Data Science department of TGPCET Mohgav. 
+              TechKruti is the annual technical festival organized by the
+              CSE & Data Science department of TGPCET Mohgav.
               Experience innovation, coding and tech competitions.
             </p>
           </div>
@@ -36,12 +37,12 @@ const Footer = () => {
             <div className="space-y-4 text-gray-400 text-sm">
 
               <p className="flex items-center gap-2">
-                <FaCalendarAlt className="text-cyan-400"/>
+                <FaCalendarAlt className="text-cyan-400" />
                 24 - 25 March 2026
               </p>
 
               <p className="flex items-center gap-2">
-                <FaMapMarkerAlt className="text-cyan-400"/>
+                <FaMapMarkerAlt className="text-cyan-400" />
                 TGPCET, Mohgav, Nagpur
               </p>
 
@@ -56,11 +57,11 @@ const Footer = () => {
             </h3>
 
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li><a href="#" className="hover:text-cyan-400">Home</a></li>
-              <li><a href="#" className="hover:text-cyan-400">About</a></li>
-              <li><a href="#" className="hover:text-cyan-400">Events</a></li>
-              <li><a href="#" className="hover:text-cyan-400">Sponsors</a></li>
-              <li><a href="#" className="hover:text-cyan-400">Contact</a></li>
+              <li><Link to="/" className="hover:text-cyan-400">Home</Link></li>
+              <li><Link to="/about" className="hover:text-cyan-400">About</Link></li>
+              <li><Link to="/upcoming" className="hover:text-cyan-400">Events</Link></li>
+              <li><Link to="/Sponsor" className="hover:text-cyan-400">Sponsors</Link></li>
+              <li><Link to="/contact" className="hover:text-cyan-400">Contact</Link></li>
             </ul>
           </div>
 
@@ -86,22 +87,22 @@ const Footer = () => {
         <div className="flex justify-center gap-6 mt-12 text-xl">
 
           <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-blue-600 transition transform hover:scale-110">
-            <FaFacebook/>
+            <FaFacebook />
           </a>
 
           <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-red-600 transition transform hover:scale-110">
-            <FaYoutube/>
+            <FaYoutube />
           </a>
 
           <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-blue-400 transition transform hover:scale-110">
-            <FaLinkedin/>
+            <FaLinkedin />
           </a>
 
           <a
             href="https://www.instagram.com/ds_tgpcet/?hl=en"
             className="bg-white/10 p-3 rounded-full hover:bg-pink-500 transition transform hover:scale-110"
           >
-            <FaInstagram/>
+            <FaInstagram />
           </a>
 
         </div>

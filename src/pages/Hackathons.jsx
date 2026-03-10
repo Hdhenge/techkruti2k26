@@ -58,7 +58,7 @@ const TechverseHackathon = () => {
           <li>📍 <strong>Venue:</strong> TGPCET Campus</li>
           <li>💰 <strong>Entry Fee:</strong> ₹90 per head</li>
           <li>👥 <strong>Team Size:</strong> 2-4 members</li>
-          <li>🏆 <strong>Prize Pool:</strong> ₹30,000+</li>
+          <li>🏆 <strong>Prize Pool:</strong> ₹20,000+</li>
         </ul>
 
       </div>
@@ -106,7 +106,7 @@ const TechverseHackathon = () => {
       <div className="mt-12">
 
         <a
-          href=""
+          href="https://forms.gle/XghiHw85MWDSuBNJ6"
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-3 rounded-lg text-lg font-semibold

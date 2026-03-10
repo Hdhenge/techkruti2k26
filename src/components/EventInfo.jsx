@@ -35,10 +35,10 @@ highlights: [
 ],
 
 contacts: [
-{ name: "Chhagan Rakhade", phone: "+919158396794" },
-{ name: "Himanshu Dhenge", phone: "+919322913858" },
+{ name: "Aditya Korde", phone: "+918446950836" },
 { name: "Aniket Kadu", phone: "+918767158314" },
-{ name: "Aditya Korde", phone: "+918446950836" }
+{ name: "Chhagan Rakhade", phone: "+919158396794" },
+{ name: "Himanshu Dhenge", phone: "+919322913858" }
 ]
 
 },
@@ -97,7 +97,6 @@ description: [
 "🔥 Games Included",
 "- BGMI",
 "- Free Fire",
-"- Valorant",
 "",
 "💡 Why Participate?",
 "- Compete with skilled gamers",
@@ -111,14 +110,14 @@ highlights: [
 "Battle Royale Matches",
 "FPS Gaming Competition",
 "Cash Prizes",
-"Solo & Squad Mode",
+"Squad Mode",
 "Pro Gamer Competition"
 ],
 
 contacts: [
 { name: "Mahesh Ingle (BGMI)", phone: "+919623742970" },
 { name: "Harshal Mogre (Free Fire)", phone: "+919579508742" },
-{ name: "Chetan Parse", phone: "" },
+{ name: "Chetan Parse", phone: "+919322476335" },
 { name: "Priyanshu Patle", phone: "+917038836841" }
 ]
 
