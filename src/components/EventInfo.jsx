@@ -34,10 +34,10 @@ const events = [
       "8 Hours Non-Stop Coding",
     ],
     contacts: [
-      { name: "Aditya Korde",     phone: "+918446950836" },
-      { name: "Aniket Kadu",      phone: "+918767158314" },
-      { name: "Chhagan Rakhade",  phone: "+919158396794" },
-      { name: "Himanshu Dhenge",  phone: "+919322913858" },
+      { name: "Aditya Korde",     phone: "+91 8446950836" },
+      { name: "Aniket Kadu",      phone: "+91 8767158314" },
+      { name: "Chhagan Rakhade",  phone: "+9 19158396794" },
+      { name: "Himanshu Dhenge",  phone: "+91 9322913858" },
     ],
   },
   {
@@ -69,10 +69,10 @@ const events = [
       "Exciting Prizes",
     ],
     contacts: [
-      { name: "Tushar Gajekeshwar", phone: "+918805892426" },
-      { name: "Prajwal Mesare",     phone: "+917709764347" },
-      { name: "Krushna Kayande",    phone: "+918766007638" },
-      { name: "Shreyash Gahane",    phone: "+918605251707" },
+      { name: "Tushar Gajekeshwar", phone: "+91 8805892426" },
+      { name: "Prajwal Mesare",     phone: "+91 7709764347" },
+      { name: "Krushna Kayande",    phone: "+91 8766007638" },
+      { name: "Shreyash Gahane",    phone: "+91 8605251707" },
     ],
   },
   {
@@ -108,10 +108,10 @@ const events = [
       "Pro Gamer Competition",
     ],
     contacts: [
-      { name: "Mahesh Ingle (BGMI)",      phone: "+919623742970" },
-      { name: "Harshal Mogre (Free Fire)", phone: "+919579508742" },
-      { name: "Chetan Parse",             phone: "+919322476335" },
-      { name: "Priyanshu Patle",          phone: "+917038836841" },
+      { name: "Mahesh Ingle (BGMI)",      phone: "+91 9623742970" },
+      { name: "Harshal Mogre (Free Fire)", phone: "+91 9579508742" },
+      { name: "Chetan Parse",             phone: "+91 9322476335" },
+      { name: "Priyanshu Patle",          phone: "+91 7038836841" },
     ],
   },
   {
@@ -142,10 +142,10 @@ const events = [
       "Exciting Prizes",
     ],
     contacts: [
-      { name: "Anuj Moon",       phone: "+919156675249" },
-      { name: "Khushbu Khandait",phone: "+918080394319" },
-      { name: "Sudhanshu Kumar", phone: "+919699921161" },
-      { name: "Sachika Singh",   phone: "+919594288342" },
+      { name: "Anuj Moon",       phone: "+91 9156675249" },
+      { name: "Khushbu Khandait",phone: "+91 8080364319" },
+      { name: "Sudhanshu Kumar", phone: "+91 9699921161" },
+      { name: "Sachika Singh",   phone: "+91 9594288342" },
     ],
   },
   {
@@ -176,11 +176,12 @@ const events = [
       "Creative Talent Showcase",
     ],
     contacts: [
-      { name: "Sarang Kachare", phone: "+919763191362" },
-      { name: "Vedant Nanoti",  phone: "+919960116568" },
-      { name: "Ritesh Krnewar", phone: "+919673904779" },
-      { name: "Mitali Kharabe", phone: "+918956903495" },
+      { name: "Sarang Kachare", phone: "+91 9325489326" },
+      { name: "Vedant Nanoti",  phone: "+91 9960116568" },
+      { name: "Aakash Sanap", phone: "+91 93569 89736" },
+      { name: "Vaibhav ambhere", phone: "+91 8668608638" },
     ],
+
   },
   {
     id: 5,
@@ -210,10 +211,11 @@ const events = [
       "Judges Evaluation",
     ],
     contacts: [
-      { name: "Ram Dhote",         phone: "+918208268304" },
-      { name: "Piyush Ambildhuke", phone: "+919923272412" },
-      { name: "Sudhanshu Rambhad", phone: "+919322143157" },
-      { name: "Yash Bhakre",       phone: "" },
+      { name: "Ram Dhote",         phone: "+91 8208268304" },
+      { name: "Piyush Ambildhuke", phone: "+91 9923272412" },
+      { name: "Sudhanshu Rambhad", phone: "+91 9322143157" },
+      { name: "Yash Bhakre",       phone: "+91 7972930332" },
+      
     ],
   },
   {
@@ -240,10 +242,10 @@ const events = [
       "Exciting Rewards",
     ],
     contacts: [
-      { name: "Anandi Sonune",  phone: "+919588446815" },
-      { name: "Anupam Sarkar",  phone: "+917588933314" },
-      { name: "Durvesh Buradkar",phone: "+919420476188" },
-      { name: "Divya Atram",    phone: "+918010883231" },
+      { name: "Anandi Sonune",  phone: "+91 9588446815" },
+      { name: "Anupam Sarkar",  phone: "+91 7588933314" },
+      { name: "Durvesh Buradkar",phone: "+91 9420476188" },
+      { name: "Divya Atram",    phone: "+91 8010883231" },
     ],
   },
 ];

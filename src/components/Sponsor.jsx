@@ -513,7 +513,7 @@ const Sponsor = () => {
           <div className="sp-become">
             <p className="sp-become-text">Interested in sponsoring?</p>
             <a
-              href="mailto:techkruti@tgpcet.ac.in"
+              href="mailto:techkruti.ds@tgpcet.com"
               className="sp-become-btn"
             >
               Become a Sponsor

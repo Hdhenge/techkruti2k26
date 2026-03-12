@@ -441,11 +441,11 @@ const Footer = () => {
                 <div className="ft-detail-text">
                   <span className="ft-detail-label">Contact</span>
                   <a
-                    href="mailto:techkruti@tgpcet.com"
+                    href="mailto:techkruti.ds@tgpcet.com"
                     className="ft-email-link"
                     style={{ fontSize: "inherit", letterSpacing: "0.04em", textTransform: "none" }}
                   >
-                    techkrutids@tgpcet.com
+                    techkruti.ds@tgpcet.com
                   </a>
                 </div>
               </div>
