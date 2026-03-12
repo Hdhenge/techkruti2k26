@@ -477,7 +477,6 @@ const Sponsor = () => {
             <span className="sp-heading-our">Our</span>
             <span className="sp-heading-sponsors">Sponsors</span>
           </h1>
-
           {/* Divider */}
           <div className="sp-divider">
             <div className="sp-divider-line" />
