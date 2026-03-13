@@ -70,7 +70,7 @@ const events = [
     ],
     contacts: [
       { name: "Tushar Gajekeshwar", phone: "+91 8805892426" },
-      { name: "Prajwal Mesare",     phone: "+91 7709764347" },
+      { name: "Rohan Tonge",     phone: "+91 7821099212" },
       { name: "Krushna Kayande",    phone: "+91 8766007638" },
       { name: "Shreyash Gahane",    phone: "+91 8605251707" },
     ],
@@ -179,7 +179,7 @@ const events = [
       { name: "Sarang Kachare", phone: "+91 9325489326" },
       { name: "Vedant Nanoti",  phone: "+91 9960116568" },
       { name: "Aakash Sanap", phone: "+91 93569 89736" },
-      { name: "Vaibhav ambhere", phone: "+91 8668608638" },
+      { name: "Vaibhav Ambedare", phone: "+91 8668608638" },
     ],
 
   },
