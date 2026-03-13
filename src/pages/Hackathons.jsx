@@ -12,7 +12,7 @@ const coordinators = [
 
 const details = [
   { icon: "📅", label: "Date",       value: "24th March, 2026" },
-  { icon: "⏰", label: "Time",       value: "9:00 AM – 5:00 PM" },
+  { icon: "⏰", label: "Time",       value: "9:00 AM – 7:00 PM" },
   { icon: "📍", label: "Venue",      value: "TGPCET Campus" },
   { icon: "💰", label: "Entry Fee",  value: "₹90 per head" },
   { icon: "👥", label: "Team Size",  value: "2 – 4 members" },
@@ -33,7 +33,7 @@ const rules = [
   { icon: "🖥️", text: "Follow ethical coding practices" },
   { icon: "🤝", text: "Respect team collaboration and fair play" },
   { icon: "⚖️", text: "Judging: Innovation, functionality, scalability" },
-  { icon: "⏳", text: "Hackathon duration — 8 hours" },
+  { icon: "⏳", text: "Hackathon duration — 10 hours" },
   { icon: "🚀", text: "Problem statements given at start" },
   { icon: "📤", text: "Final submissions before deadline" },
   { icon: "🔍", text: "Judges evaluate creativity and execution" },

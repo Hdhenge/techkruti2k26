@@ -14,7 +14,7 @@ const events = [
         heading: "About the Event",
         description: [
           "🚀 What is Hackathon Krutiverse?",
-          "Hackathon Krutiverse is an 8-hour coding marathon where innovators, developers, designers, and problem-solvers collaborate to build impactful solutions.",
+          "Hackathon Krutiverse is an 10-hour coding marathon where innovators, developers, designers, and problem-solvers collaborate to build impactful solutions.",
           "",
           "💡 Why Participate?",
           "- Solve real-world problems with cutting-edge technology",
