@@ -152,7 +152,7 @@ const events = [
     id: 4,
     title: "Open Mic Talent Show",
     subtitle: "Showcase Your Talent Through Poetry, Music & Comedy",
-    date: "25 March, 2026",
+    date: "24 March, 2026",
     accentFrom: "#ec4899", accentTo: "#f97316",
     registration: "https://forms.gle/n3EFvmZ6FNuVXjDo8",
     about: [

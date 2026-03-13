@@ -70,7 +70,7 @@ const events = [
     fee: "Free",
     teamSize: "Solo / Team",
     venue: "TGPCET Campus",
-    date: "25th March",
+    date: "24th March",
     time: "10:00 AM – 5:00 PM",
     registration: "https://forms.gle/fnNGchSssi7usPyY7",
     tag: "CREATIVE",
