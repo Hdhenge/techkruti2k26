@@ -2,20 +2,20 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const coordinators = [
-  { name: "Chhagan Rakhade",  phone: "+919158396794" },
-  { name: "Himanshu Dhenge",  phone: "+919322913858" },
-  { name: "Ram Dhote",        phone: "+918208268304" },
-  { name: "Aditya Korde",     phone: "+918446950836" },
-  { name: "Sarang Kachare",   phone: "+919325489326" },
-  { name: "Vedant Nanoti",    phone: "+919960116568" },
+  { name: "Chhagan Rakhade", phone: "+919158396794" },
+  { name: "Himanshu Dhenge", phone: "+919322913858" },
+  { name: "Ram Dhote", phone: "+918208268304" },
+  { name: "Aditya Korde", phone: "+918446950836" },
+  { name: "Sarang Kachare", phone: "+919325489326" },
+  { name: "Vedant Nanoti", phone: "+919960116568" },
 ];
 
 const details = [
-  { icon: "📅", label: "Date",       value: "24th March, 2026" },
-  { icon: "⏰", label: "Time",       value: "9:00 AM – 7:00 PM" },
-  { icon: "📍", label: "Venue",      value: "TGPCET Campus" },
-  { icon: "💰", label: "Entry Fee",  value: "₹90 per head" },
-  { icon: "👥", label: "Team Size",  value: "2 – 4 members" },
+  { icon: "📅", label: "Date", value: "24th March, 2026" },
+  { icon: "⏰", label: "Time", value: "9:00 AM – 7:00 PM" },
+  { icon: "📍", label: "Venue", value: "TGPCET Campus" },
+  { icon: "💰", label: "Entry Fee", value: "₹90 per head" },
+  { icon: "👥", label: "Team Size", value: "2 – 4 members" },
   { icon: "🏆", label: "Prize Pool", value: "₹20,000+" },
 ];
 
@@ -29,16 +29,16 @@ const domains = [
 
 // ── Timeline ──────────────────────────────────────────────
 const timeline = [
-  { time: "9:00 AM",        tag: "Round 1 · Start",        tagColor: "#f97316", label: "Problem Statement Revealed",                  desc: "All teams receive the same problem statement simultaneously. Clock starts now." },
-  { time: "9 AM – 1 PM",   tag: "Round 1 · Build (4 hrs)", tagColor: "#f97316", label: "Prototype Build + PPT Preparation",           desc: "Build a working prototype AND prepare a PPT — both within these 4 hours. No pre-made slides allowed." },
-  { time: "11:00 AM",       tag: "Bonus Push +5 pts",       tagColor: "#22c55e", label: "GitHub Checkpoint 1",                         desc: "Teams that push meaningful code to GitHub by 11 AM earn +5 bonus points." },
-  { time: "1:00 PM",        tag: "Round 1 · Evaluation",    tagColor: "#ec4899", label: "Combined PPT + Prototype Evaluation Begins",  desc: "Each team presents their PPT and live prototype together — both evaluated simultaneously by judges. 5 min pitch + 2 min Q&A. Judges score PPT clarity, prototype demo, and tech depth in one single session." },
-  { time: "After 1 PM",     tag: "Evaluation Window",       tagColor: "#ec4899", label: "Judges Deliberate · Teams Keep Building",     desc: "All teams must continue building until the Round 1 result is officially announced. Use this time to extend features and improve your prototype — it gives you a head start in Round 2." },
-  { time: "~2:00 PM",       tag: "Round 2 · Start",         tagColor: "#a855f7", label: "Selected Teams Announced → Round 2 Begins",   desc: "Top teams announced. Non-qualifying teams dismissed. Selected teams now build the complete final model." },
-  { time: "2 PM – 6:30 PM", tag: "Round 2 · Build",         tagColor: "#a855f7", label: "Full Model Development Sprint",               desc: "Build complete, production-ready solution. Every 2 hours — GitHub push checkpoint for +5 bonus points." },
-  { time: "6:30 PM",        tag: "Code Freeze",              tagColor: "#ec4899", label: "Final Push — No More Commits",                desc: "All code pushed to GitHub. README finalized. No commits accepted after 5:30 PM." },
-  { time: "6:30 – 7 PM",   tag: "Final Presentations",     tagColor: "#f7c948", label: "Selected Teams Final Presentations",           desc: "Each selected team: 5 min demo + 3 min Q&A. Live working demo required." },
-  { time: "7:30 PM",        tag: "Winner",                   tagColor: "#f7c948", label: "Winner Announcement + Certificates",          desc: "Top 3 teams announced. Certificates for all. Prizes as announced by organizing committee." },
+  { time: "9:00 AM", tag: "Round 1 · Start", tagColor: "#f97316", label: "Problem Statement Revealed", desc: "All teams receive the same problem statement simultaneously. Clock starts now." },
+  { time: "9 AM – 1 PM", tag: "Round 1 · Build (4 hrs)", tagColor: "#f97316", label: "Prototype Build + PPT Preparation", desc: "Build a working prototype AND prepare a PPT — both within these 4 hours. No pre-made slides allowed." },
+  { time: "11:00 AM", tag: "Bonus Push +5 pts", tagColor: "#22c55e", label: "GitHub Checkpoint 1", desc: "Teams that push meaningful code to GitHub by 11 AM earn +5 bonus points." },
+  { time: "1:00 PM", tag: "Round 1 · Evaluation", tagColor: "#ec4899", label: "Combined PPT + Prototype Evaluation Begins", desc: "Each team presents their PPT and live prototype together — both evaluated simultaneously by judges. 5 min pitch + 2 min Q&A. Judges score PPT clarity, prototype demo, and tech depth in one single session." },
+  { time: "After 1 PM", tag: "Evaluation Window", tagColor: "#ec4899", label: "Judges Deliberate · Teams Keep Building", desc: "All teams must continue building until the Round 1 result is officially announced. Use this time to extend features and improve your prototype — it gives you a head start in Round 2." },
+  { time: "~2:00 PM", tag: "Round 2 · Start", tagColor: "#a855f7", label: "Selected Teams Announced → Round 2 Begins", desc: "Top teams announced. Non-qualifying teams dismissed. Selected teams now build the complete final model." },
+  { time: "2 PM – 6:30 PM", tag: "Round 2 · Build", tagColor: "#a855f7", label: "Full Model Development Sprint", desc: "Build complete, production-ready solution. Every 2 hours — GitHub push checkpoint for +5 bonus points." },
+  { time: "6:30 PM", tag: "Code Freeze", tagColor: "#ec4899", label: "Final Push — No More Commits", desc: "All code pushed to GitHub. README finalized. No commits accepted after 5:30 PM." },
+  { time: "6:30 – 7 PM", tag: "Final Presentations", tagColor: "#f7c948", label: "Selected Teams Final Presentations", desc: "Each selected team: 5 min demo + 3 min Q&A. Live working demo required." },
+  { time: "7:30 PM", tag: "Winner", tagColor: "#f7c948", label: "Winner Announcement + Certificates", desc: "Top 3 teams announced. Certificates for all. Prizes as announced by organizing committee." },
 ];
 
 // ── Rules split into Round 1 & Round 2 ───────────────────
@@ -87,28 +87,28 @@ const dqList = [
 
 // ── Judging Criteria ──────────────────────────────────────
 const criteriaR1 = [
-  { pts: 30, label: "Innovation & Problem Fit",       desc: "How well the idea addresses the given problem statement",                           color: "#f97316" },
-  { pts: 25, label: "Prototype Quality",              desc: "Working features, functional demo — evaluated live during the same session as PPT", color: "#a855f7" },
-  { pts: 25, label: "Technical Depth (PPT + Demo)",   desc: "Tech stack choice, architecture clarity, code quality — PPT & prototype judged together", color: "#ec4899" },
-  { pts: 20, label: "Presentation & Q&A",             desc: "PPT clarity, communication, live demo flow, Q&A handling, time adherence",         color: "#f7c948" },
+  { pts: 30, label: "Innovation & Problem Fit", desc: "How well the idea addresses the given problem statement", color: "#f97316" },
+  { pts: 25, label: "Prototype Quality", desc: "Working features, functional demo — evaluated live during the same session as PPT", color: "#a855f7" },
+  { pts: 25, label: "Technical Depth (PPT + Demo)", desc: "Tech stack choice, architecture clarity, code quality — PPT & prototype judged together", color: "#ec4899" },
+  { pts: 20, label: "Presentation & Q&A", desc: "PPT clarity, communication, live demo flow, Q&A handling, time adherence", color: "#f7c948" },
 ];
 
 const criteriaR2 = [
-  { pts: 30, label: "Problem Relevance",   desc: "How completely the model solves the problem",    color: "#f97316" },
+  { pts: 30, label: "Problem Relevance", desc: "How completely the model solves the problem", color: "#f97316" },
   { pts: 25, label: "Technical Execution", desc: "Code quality, feature completeness, robustness", color: "#a855f7" },
-  { pts: 20, label: "Innovation",          desc: "Unique approach, creative feature choices",       color: "#ec4899" },
-  { pts: 15, label: "Collaboration",       desc: "Commit distribution across all team members",     color: "#10b981" },
-  { pts: 10, label: "Final Demo",          desc: "5-min demo + 3-min Q&A, live working build",     color: "#f7c948" },
+  { pts: 20, label: "Innovation", desc: "Unique approach, creative feature choices", color: "#ec4899" },
+  { pts: 15, label: "Collaboration", desc: "Commit distribution across all team members", color: "#10b981" },
+  { pts: 10, label: "Final Demo", desc: "5-min demo + 3-min Q&A, live working build", color: "#f7c948" },
 ];
 
 const accentPairs = [
-  ["#f97316","#a855f7"],["#06b6d4","#6366f1"],["#ec4899","#f97316"],
-  ["#10b981","#06b6d4"],["#facc15","#f97316"],["#a855f7","#ec4899"],
+  ["#f97316", "#a855f7"], ["#06b6d4", "#6366f1"], ["#ec4899", "#f97316"],
+  ["#10b981", "#06b6d4"], ["#facc15", "#f97316"], ["#a855f7", "#ec4899"],
 ];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 26 },
-  show:   { opacity: 1, y: 0 },
+  show: { opacity: 1, y: 0 },
 };
 
 // ── Shared styled pill for section tags ───────────────────
@@ -163,7 +163,7 @@ const RulesTabs = () => {
             style={{
               padding: "9px 22px",
               background: tab === t.id
-                ? `linear-gradient(135deg,${t.id==="r1"?"#f97316":"#a855f7"},${t.id==="r1"?"#ec4899":"#6366f1"})`
+                ? `linear-gradient(135deg,${t.id === "r1" ? "#f97316" : "#a855f7"},${t.id === "r1" ? "#ec4899" : "#6366f1"})`
                 : "rgba(255,255,255,0.03)",
               border: "none",
               color: tab === t.id ? "#fff" : "rgba(255,255,255,0.3)",
@@ -208,14 +208,14 @@ const JudgingTabs = () => {
   return (
     <div>
       <div style={{ display: "flex", gap: 0, marginBottom: 20, borderRadius: 10, overflow: "hidden", border: "1px solid rgba(255,255,255,0.07)", width: "fit-content" }}>
-        {[{ id:"r1", label:"Round 1" },{ id:"r2", label:"Round 2 + Bonus" }].map(t => (
+        {[{ id: "r1", label: "Round 1" }, { id: "r2", label: "Round 2 + Bonus" }].map(t => (
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
             style={{
               padding: "9px 22px",
               background: tab === t.id
-                ? `linear-gradient(135deg,${t.id==="r1"?"#f97316":"#a855f7"},${t.id==="r1"?"#ec4899":"#6366f1"})`
+                ? `linear-gradient(135deg,${t.id === "r1" ? "#f97316" : "#a855f7"},${t.id === "r1" ? "#ec4899" : "#6366f1"})`
                 : "rgba(255,255,255,0.03)",
               border: "none",
               color: tab === t.id ? "#fff" : "rgba(255,255,255,0.3)",
@@ -607,17 +607,23 @@ const TechverseHackathon = () => (
             A high-energy <strong>10-hour coding marathon</strong> where top minds
             solve <strong>real-world challenges</strong> across 2 intense rounds.
           </p>
+          <div style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: 14 }}>
+            <img
+              src="/sponsors/Dev.jpg"
+              alt="Devecut"
+            />
+          </div>
           <div className="hk-pills">
             <div className="hk-pill">
-              <span className="hk-pill-dot" style={{ background:"#f97316", boxShadow:"0 0 8px #f97316" }} />
+              <span className="hk-pill-dot" style={{ background: "#f97316", boxShadow: "0 0 8px #f97316" }} />
               24 March 2026
             </div>
             <div className="hk-pill">
-              <span className="hk-pill-dot" style={{ background:"#10b981", boxShadow:"0 0 8px #10b981" }} />
+              <span className="hk-pill-dot" style={{ background: "#10b981", boxShadow: "0 0 8px #10b981" }} />
               ₹20,000+ Prize Pool
             </div>
             <div className="hk-pill">
-              <span className="hk-pill-dot" style={{ background:"#a855f7", boxShadow:"0 0 8px #a855f7" }} />
+              <span className="hk-pill-dot" style={{ background: "#a855f7", boxShadow: "0 0 8px #a855f7" }} />
               10 Hours · 2 Rounds
             </div>
           </div>
@@ -640,8 +646,8 @@ const TechverseHackathon = () => (
                 <div className="hk-detail-right">
                   <span className="hk-detail-label">{d.label}</span>
                   <span className="hk-detail-value" style={{
-                    background: `linear-gradient(135deg, ${accentPairs[i%accentPairs.length][0]}, ${accentPairs[i%accentPairs.length][1]})`,
-                    WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text",
+                    background: `linear-gradient(135deg, ${accentPairs[i % accentPairs.length][0]}, ${accentPairs[i % accentPairs.length][1]})`,
+                    WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
                   }}>{d.value}</span>
                 </div>
               </div>
@@ -686,7 +692,7 @@ const TechverseHackathon = () => (
               return (
                 <div key={i} className="hk-domain-item">
                   <span className="hk-domain-emoji">{d.icon}</span>
-                  <span style={{ background:`linear-gradient(135deg,${c1},${c2})`, WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text", fontWeight:700 }}>
+                  <span style={{ background: `linear-gradient(135deg,${c1},${c2})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", fontWeight: 700 }}>
                     {d.label}
                   </span>
                 </div>
@@ -710,17 +716,17 @@ const TechverseHackathon = () => (
             borderRadius: 16,
             padding: "clamp(18px,4vw,28px)",
           }}>
-            <div style={{ display:"flex", alignItems:"center", gap:10, marginBottom:14 }}>
-              <span style={{ fontSize:20 }}>🤖</span>
-              <span style={{ fontFamily:"'Bebas Neue',sans-serif", fontSize:18, letterSpacing:"2px", color:"#22c55e" }}>AI Tools Fully Allowed</span>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
+              <span style={{ fontSize: 20 }}>🤖</span>
+              <span style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: 18, letterSpacing: "2px", color: "#22c55e" }}>AI Tools Fully Allowed</span>
             </div>
             <ul className="hk-ai-list">
               {aiAllowed.map((a, i) => (
                 <li key={i}><span className="hk-ai-ck">{a.icon}</span>{a.text}</li>
               ))}
             </ul>
-            <div style={{ marginTop:14, padding:"10px 14px", background:"rgba(247,201,72,0.06)", border:"1px solid rgba(247,201,72,0.15)", borderRadius:8, fontSize:12, color:"rgba(255,255,255,0.35)", lineHeight:1.6 }}>
-              <span style={{ color:"#f7c948", fontWeight:700 }}>Note: </span>
+            <div style={{ marginTop: 14, padding: "10px 14px", background: "rgba(247,201,72,0.06)", border: "1px solid rgba(247,201,72,0.15)", borderRadius: 8, fontSize: 12, color: "rgba(255,255,255,0.35)", lineHeight: 1.6 }}>
+              <span style={{ color: "#f7c948", fontWeight: 700 }}>Note: </span>
               If you use AI to generate significant portions of your project, judges may ask you to explain how it works. Inability to explain your own code affects your score — it does not disqualify you.
             </div>
           </div>
@@ -755,14 +761,14 @@ const TechverseHackathon = () => (
           <div className="hk-coords-grid">
             {coordinators.map((c, i) => {
               const [c1, c2] = accentPairs[i % accentPairs.length];
-              const initials = c.name.split(" ").map(w => w[0]).join("").slice(0,2);
+              const initials = c.name.split(" ").map(w => w[0]).join("").slice(0, 2);
               return (
                 <div key={i} className="hk-coord-card">
-                  <span style={{ position:"absolute", top:0, left:0, right:0, height:1, background:`linear-gradient(90deg,transparent,${c1}77,${c2}77,transparent)`, pointerEvents:"none" }} />
-                  <div className="hk-coord-avatar" style={{ background:`linear-gradient(135deg,${c1}33,${c2}33)`, border:`1px solid ${c1}44` }}>
-                    <span style={{ background:`linear-gradient(135deg,${c1},${c2})`, WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text" }}>{initials}</span>
+                  <span style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg,transparent,${c1}77,${c2}77,transparent)`, pointerEvents: "none" }} />
+                  <div className="hk-coord-avatar" style={{ background: `linear-gradient(135deg,${c1}33,${c2}33)`, border: `1px solid ${c1}44` }}>
+                    <span style={{ background: `linear-gradient(135deg,${c1},${c2})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>{initials}</span>
                   </div>
-                  <div className="hk-coord-name" style={{ backgroundImage:`linear-gradient(135deg,#fff 20%,${c1} 80%,${c2} 100%)` }}>
+                  <div className="hk-coord-name" style={{ backgroundImage: `linear-gradient(135deg,#fff 20%,${c1} 80%,${c2} 100%)` }}>
                     {c.name}
                   </div>
                   <a href={`tel:${c.phone}`} className="hk-coord-phone">{c.phone}</a>

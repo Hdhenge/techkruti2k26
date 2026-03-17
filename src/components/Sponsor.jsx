@@ -2,9 +2,8 @@ import React from "react";
 
 const sponsors = [
   { id: 1, name: "CSI", logo: "/sponsors/CSI.jpg", website: "https://csiindia.org/", tier: "title" },
-  // Add more sponsors here
-  // { id: 2, name: "Company", logo: "/sponsors/logo.png", website: "https://example.com", tier: "gold" },
-  // tier options: "title" | "gold" | "silver"
+  { id: 2, name: "DevCult", logo: "/sponsors/Dev.jpg", website: "https://www.instagram.com/devcult.india", tier: "title" },
+  { id: 3, name: "Softronix", logo: "/sponsors/SoftronixLogo1.png", website: "https://softronix.in/", tier: "title" },
 ];
 
 const tierConfig = {
