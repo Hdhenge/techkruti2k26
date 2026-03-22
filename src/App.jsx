@@ -14,7 +14,6 @@ import Scroll from "./components/Scroll";
 import ProblemStatements from "./pages/Problems";
 import ProblemForm from "./pages/ProblemForm";
 import LoginForm from "./pages/LoginForm";
-import RegisterForm from "./pages/RegisterForm";
 import ProblemList from "./pages/ProblemList";
 import Gallery from "./pages/Gallery";
 
@@ -57,7 +56,6 @@ function App() {
         <Route path="/ProblemStatements2003" element={<ProblemStatements/>} />
         <Route path="/ProblemForm" element={<ProblemForm />} />
         <Route path="/login" element={<LoginForm />} />
-        <Route path="/register" element={<RegisterForm />} />
         <Route path="/repos" element={<ProblemList />} />
         <Route path="/gallery" element={<Gallery />} />
       </Routes>

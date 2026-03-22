@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -15,16 +16,21 @@ const LoginForm = () => {
     e.preventDefault();
     setMessage(""); setError(""); setLoading(true);
     try {
-      const res = await axios.post(
-        "https://techkruti-backend.onrender.com/api/auth/login",
-        formData
-      );
-      localStorage.setItem("token", res.data.token);
+      const cred = await signInWithEmailAndPassword(auth, formData.email, formData.password);
+      const token = await cred.user.getIdToken();
+      localStorage.setItem("token", token);
       localStorage.setItem("isAdmin", true);
       setMessage("Login successful! Redirecting...");
       setTimeout(() => { window.location.href = "/repos"; }, 1500);
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed. Try again.");
+      switch (err.code) {
+        case "auth/user-not-found":
+        case "auth/invalid-credential":  setError("Invalid email or password."); break;
+        case "auth/wrong-password":      setError("Incorrect password. Try again."); break;
+        case "auth/invalid-email":       setError("Invalid email address."); break;
+        case "auth/too-many-requests":   setError("Too many attempts. Try again later."); break;
+        default: setError("Login failed. " + err.message);
+      }
     } finally {
       setLoading(false);
     }
@@ -52,13 +58,11 @@ const LoginForm = () => {
           padding: 40px 20px;
         }
 
-        /* Noise */
         .lf-root::before {
           content: ""; position: absolute; inset: 0;
           background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
           opacity: 0.022; pointer-events: none; z-index: 0;
         }
-        /* Scanlines */
         .lf-root::after {
           content: ""; position: absolute; inset: 0;
           background-image: repeating-linear-gradient(
@@ -68,7 +72,6 @@ const LoginForm = () => {
           pointer-events: none; z-index: 0;
         }
 
-        /* Orbs */
         .lf-orb {
           position: absolute; border-radius: 50%;
           filter: blur(100px); pointer-events: none; z-index: 0;
@@ -86,16 +89,9 @@ const LoginForm = () => {
           animation: lfDrift2 22s ease-in-out infinite;
         }
 
-        @keyframes lfDrift1 {
-          0%,100%{ transform:translate(0,0) scale(1); }
-          50%    { transform:translate(3%,5%) scale(1.06); }
-        }
-        @keyframes lfDrift2 {
-          0%,100%{ transform:translate(0,0); }
-          50%    { transform:translate(-4%,-3%); }
-        }
+        @keyframes lfDrift1 { 0%,100%{ transform:translate(0,0) scale(1); } 50%{ transform:translate(3%,5%) scale(1.06); } }
+        @keyframes lfDrift2 { 0%,100%{ transform:translate(0,0); } 50%{ transform:translate(-4%,-3%); } }
 
-        /* ── Card ── */
         .lf-card {
           position: relative; z-index: 2;
           width: 100%; max-width: 420px;
@@ -107,29 +103,20 @@ const LoginForm = () => {
           animation: lfFadeUp 0.7s ease both;
         }
 
-        @keyframes lfFadeUp {
-          from { opacity:0; transform:translateY(28px); }
-          to   { opacity:1; transform:translateY(0); }
-        }
+        @keyframes lfFadeUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
 
-        /* Top accent border */
         .lf-card-top {
           position: absolute; top: 0; left: 0; right: 0; height: 1px;
           background: linear-gradient(90deg, transparent, #f97316aa, #a855f7aa, transparent);
           border-radius: 20px 20px 0 0;
         }
 
-        /* Corner accents */
-        .lf-corner {
-          position: absolute; width: 16px; height: 16px;
-          opacity: 0.4;
-        }
+        .lf-corner { position: absolute; width: 16px; height: 16px; opacity: 0.4; }
         .lf-corner.tl { top: 12px; left: 12px; border-top: 1.5px solid #f97316; border-left: 1.5px solid #f97316; }
         .lf-corner.tr { top: 12px; right: 12px; border-top: 1.5px solid #f97316; border-right: 1.5px solid #f97316; }
         .lf-corner.bl { bottom: 12px; left: 12px; border-bottom: 1.5px solid #a855f7; border-left: 1.5px solid #a855f7; }
         .lf-corner.br { bottom: 12px; right: 12px; border-bottom: 1.5px solid #a855f7; border-right: 1.5px solid #a855f7; }
 
-        /* ── Header ── */
         .lf-header { text-align: center; margin-bottom: 28px; }
 
         .lf-lock-icon {
@@ -154,38 +141,24 @@ const LoginForm = () => {
         .lf-title-admin {
           display: block;
           background: linear-gradient(135deg, #fff 30%, rgba(255,255,255,0.5));
-          -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-          background-clip: text;
+          -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
         .lf-title-login {
           display: block;
           background: linear-gradient(135deg, #f97316 0%, #ec4899 55%, #a855f7 100%);
-          -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-          background-clip: text;
+          -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
 
-        /* ── Alerts ── */
         .lf-alert {
           display: flex; align-items: center; gap: 10px;
           padding: 11px 14px; border-radius: 10px;
           font-size: clamp(12px,2.4vw,13px); font-weight: 600;
           letter-spacing: 0.04em; margin-bottom: 20px;
         }
-        .lf-alert.success {
-          background: rgba(16,185,129,0.08);
-          border: 1px solid rgba(16,185,129,0.2);
-          color: #4ade80;
-        }
-        .lf-alert.error {
-          background: rgba(239,68,68,0.08);
-          border: 1px solid rgba(239,68,68,0.2);
-          color: #f87171;
-        }
-        .lf-alert-dot {
-          width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
-        }
+        .lf-alert.success { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.2); color: #4ade80; }
+        .lf-alert.error   { background: rgba(239,68,68,0.08);  border: 1px solid rgba(239,68,68,0.2);  color: #f87171; }
+        .lf-alert-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 
-        /* ── Form fields ── */
         .lf-field { margin-bottom: 18px; }
 
         .lf-label {
@@ -195,13 +168,10 @@ const LoginForm = () => {
           color: rgba(255,255,255,0.28); margin-bottom: 8px;
         }
 
-        .lf-input-wrap {
-          position: relative;
-        }
+        .lf-input-wrap { position: relative; }
 
         .lf-input {
-          width: 100%;
-          padding: 12px 16px;
+          width: 100%; padding: 12px 16px;
           background: rgba(255,255,255,0.04);
           border: 1px solid rgba(255,255,255,0.09);
           border-radius: 10px;
@@ -213,19 +183,13 @@ const LoginForm = () => {
           transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
           -webkit-appearance: none;
         }
-
-        .lf-input::placeholder {
-          color: rgba(255,255,255,0.18);
-          font-weight: 400;
-        }
-
+        .lf-input::placeholder { color: rgba(255,255,255,0.18); font-weight: 400; }
         .lf-input:focus {
           background: rgba(255,255,255,0.06);
           border-color: rgba(249,115,22,0.45);
           box-shadow: 0 0 0 3px rgba(249,115,22,0.08);
         }
 
-        /* Focus bar */
         .lf-focus-bar {
           position: absolute; bottom: 0; left: 10%; right: 10%; height: 1px;
           background: linear-gradient(90deg, #f97316, #a855f7);
@@ -235,12 +199,9 @@ const LoginForm = () => {
         }
         .lf-input:focus ~ .lf-focus-bar { transform: scaleX(1); }
 
-        /* ── Submit Button ── */
         .lf-btn {
-          width: 100%;
-          padding: 13px;
-          border-radius: 100px;
-          border: none; cursor: pointer;
+          width: 100%; padding: 13px;
+          border-radius: 100px; border: none; cursor: pointer;
           font-family: 'Rajdhani', sans-serif;
           font-size: clamp(13px,2.5vw,15px); font-weight: 700;
           letter-spacing: 0.25em; text-transform: uppercase;
@@ -251,27 +212,17 @@ const LoginForm = () => {
           margin-top: 6px;
           display: flex; align-items: center; justify-content: center; gap: 8px;
         }
-        .lf-btn:hover:not(:disabled) {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 36px rgba(249,115,22,0.5);
-        }
-        .lf-btn:disabled {
-          opacity: 0.6; cursor: not-allowed;
-        }
+        .lf-btn:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 36px rgba(249,115,22,0.5); }
+        .lf-btn:disabled { opacity: 0.6; cursor: not-allowed; }
 
-        /* Spinner */
         .lf-spinner {
           width: 14px; height: 14px;
           border: 2px solid rgba(255,255,255,0.3);
-          border-top-color: #fff;
-          border-radius: 50%;
+          border-top-color: #fff; border-radius: 50%;
           animation: spin 0.7s linear infinite;
         }
-        @keyframes spin {
-          to { transform: rotate(360deg); }
-        }
+        @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* ── Footer label ── */
         .lf-footer-text {
           text-align: center; margin-top: 20px;
           font-size: 10px; font-weight: 700;
@@ -285,16 +236,12 @@ const LoginForm = () => {
         <div className="lf-orb lf-orb2" />
 
         <div className="lf-card">
-          {/* Top border */}
           <div className="lf-card-top" />
-
-          {/* Corner accents */}
           <div className="lf-corner tl" />
           <div className="lf-corner tr" />
           <div className="lf-corner bl" />
           <div className="lf-corner br" />
 
-          {/* Header */}
           <div className="lf-header">
             <div className="lf-lock-icon">🔑</div>
             <p className="lf-eyebrow">TechKruti 2K26</p>
@@ -304,7 +251,6 @@ const LoginForm = () => {
             </h1>
           </div>
 
-          {/* Alerts */}
           {message && (
             <div className="lf-alert success">
               <span className="lf-alert-dot" style={{ background: "#4ade80" }} />
@@ -318,10 +264,7 @@ const LoginForm = () => {
             </div>
           )}
 
-          {/* Form */}
-          <div onSubmit={handleSubmit}>
-
-            {/* Email */}
+          <form onSubmit={handleSubmit}>
             <div className="lf-field">
               <label className="lf-label" htmlFor="email">Email Address</label>
               <div className="lf-input-wrap">
@@ -339,7 +282,6 @@ const LoginForm = () => {
               </div>
             </div>
 
-            {/* Password */}
             <div className="lf-field">
               <label className="lf-label" htmlFor="password">Password</label>
               <div className="lf-input-wrap">
@@ -357,20 +299,14 @@ const LoginForm = () => {
               </div>
             </div>
 
-            {/* Submit */}
-            <button
-              type="button"
-              className="lf-btn"
-              disabled={loading}
-              onClick={handleSubmit}
-            >
+            <button type="submit" className="lf-btn" disabled={loading}>
               {loading ? (
                 <><div className="lf-spinner" /> Logging in...</>
               ) : (
                 <>Login →</>
               )}
             </button>
-          </div>
+          </form>
 
           <p className="lf-footer-text">TechKruti · TGPCET · Secured Access</p>
         </div>
