@@ -48,18 +48,18 @@ function App() {
       <Navbar id="nav" />
       <Scroll />
       <Routes>
-        <Route path="/"                       element={<Home />} />
-        <Route path="/about"                  element={<About />} />
-        <Route path="/contact"                element={<Contact />} />
-        <Route path="/event/:id"              element={<Event />} />
-        <Route path="/hackthon"               element={<Hackathons />} />
-        <Route path="/Sponsor"                element={<Sponsor />} />
-        <Route path="/ProblemStatements8485"  element={<ProblemStatements />} />
-        <Route path="/ProblemForm"            element={<ProblemForm />} />
-        <Route path="/login"                  element={<LoginForm />} />
-        <Route path="/register"               element={<RegisterForm />} />
-        <Route path="/repos"                  element={<ProblemList />} />
-        <Route path="/gallery"               element={<Gallery />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/event/:id" element={<Event />} />
+        <Route path="/hackthon" element={<Hackathons />} />
+        <Route path="/Sponsor" element={<Sponsor />} />
+        <Route path="/ProblemStatements2003" element={<ProblemStatements/>} />
+        <Route path="/ProblemForm" element={<ProblemForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        <Route path="/repos" element={<ProblemList />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
       <Footer />
     </>
