@@ -415,7 +415,7 @@ const ProblemStatements = () => {
         }
 
         .ps-card {
-          background: rgba(255,255,255,0.025);
+          background: rgb(0, 0, 0);
           border: 1px solid rgba(255,255,255,0.07);
           border-radius: 14px; overflow: hidden; position: relative;
           transition: border-color 0.3s, background 0.3s, transform 0.3s;
@@ -438,7 +438,7 @@ const ProblemStatements = () => {
 
         .ps-domain-tag {
           font-size: 9px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;
-          color: rgba(255,255,255,0.2); margin-bottom: -4px;
+          color: rgba(250, 234, 234, 0.86); margin-bottom: -4px;
         }
 
         .ps-code {
@@ -455,7 +455,7 @@ const ProblemStatements = () => {
         }
         .ps-card-desc {
           font-size: clamp(11px,1.9vw,12.5px); font-weight: 600;
-          color: rgba(255,255,255,0.35); line-height: 1.75; letter-spacing: 0.03em; flex: 1;
+          color: rgb(237, 237, 237); line-height: 1.75; letter-spacing: 0.03em; flex: 1;
         }
 
         .ps-toggle {
@@ -465,9 +465,9 @@ const ProblemStatements = () => {
           border: none; border-top: 1px solid rgba(255,255,255,0.05);
           cursor: pointer; font-family: 'Rajdhani', sans-serif;
           font-size: 10px; font-weight: 700; letter-spacing: 0.35em; text-transform: uppercase;
-          color: rgba(255,255,255,0.28); transition: color 0.2s, background 0.2s;
+          color: rgba(238, 238, 238, 0.86); transition: color 0.2s, background 0.2s;
         }
-        .ps-toggle:hover { color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.03); }
+        .ps-toggle:hover { color: rgba(255, 255, 255, 0.77); background: rgba(255,255,255,0.03); }
         .ps-toggle-arrow {
           width: 16px; height: 16px; border-radius: 50%;
           display: flex; align-items: center; justify-content: center;
@@ -485,7 +485,7 @@ const ProblemStatements = () => {
         .ps-feature {
           display: flex; align-items: flex-start; gap: 10px;
           font-size: clamp(11px,1.9vw,12px); font-weight: 600;
-          color: rgba(255,255,255,0.45); letter-spacing: 0.04em; line-height: 1.5;
+          color: rgba(255, 255, 255, 0.95); letter-spacing: 0.04em; line-height: 1.5;
         }
         .ps-feature-arrow { flex-shrink: 0; margin-top: 1px; font-size: 10px; font-weight: 700; }
 
