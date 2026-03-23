@@ -4,7 +4,7 @@ const dataToShow = [
   // ── Web & App Development ──────────────────────────────────────
   {
     title: "HungerBridge",
-    code: "PS-01",
+    code: "TGPDS-01",
     domain: "Web & App Development",
     description:
       "Every day, wedding halls, canteens, and restaurants discard hundreds of meals while nearby shelters run short. Build a real-time surplus food coordination app where donors post availability with a pickup countdown, NGOs claim slots, and a volunteer dispatch system manages last-mile delivery — all within a 2-hour expiry window.",
@@ -17,7 +17,7 @@ const dataToShow = [
   },
   {
     title: "RozgarSaathi",
-    code: "PS-02",
+    code: "TGPDS-02",
     domain: "Web & App Development",
     description:
       "Daily wage workers — plumbers, electricians, painters, mazdoors — lose work days standing at nakas with zero digital visibility. Build a hyperlocal daily gig board where workers register with skill tags and availability, and households or contractors post same-day jobs with location. No middleman, no commission.",
@@ -30,7 +30,7 @@ const dataToShow = [
   },
   {
     title: "HostelSync",
-    code: "PS-03",
+    code: "TGPDS-03",
     domain: "Web & App Development",
     description:
       "Hostel wardens manage attendance, gate passes, visitor logs, and mess feedback through registers and WhatsApp groups — creating operational chaos. Build a unified hostel operations platform with digital gate pass approvals, parent SMS notifications, real-time room allocation, and mess menu voting.",
@@ -43,7 +43,7 @@ const dataToShow = [
   },
   {
     title: "WillMaker",
-    code: "PS-04",
+    code: "TGPDS-04",
     domain: "Web & App Development",
     description:
       "Over 70% of Indian families face legal disputes after a member's passing due to absence of a registered will. Build a guided digital will creation tool where users answer plain-language questions, the system generates a legally structured draft will, and optionally stores a timestamped hash on a public ledger as proof of existence.",
@@ -54,11 +54,37 @@ const dataToShow = [
     ],
     color: "#a855f7",
   },
+  {
+    title: "PlaceBridge",
+    code: "TGPDS-05",
+    domain: "Web & App Development",
+    description:
+      "Students often miss campus placement drives due to fragmented communication and manual eligibility tracking. Build PlaceBridge, a centralized web-based application system where students can instantly check their eligibility for various companies based on CGPA, skills, and backlogs, apply for roles, and track their progress efficiently.",
+    features: [
+      "Smart Eligibility Checker based on dynamic company criteria",
+      "Unified Application Dashboard with progress tracking",
+      "Real-Time Alerts & Notifications for upcoming drives",
+    ],
+    color: "#06b6d4",
+  },
+  {
+    title: "EventFlex", 
+    code: "TGPDS-06",
+    domain: "Web & App Development", 
+    description:
+      "Students organizing events like hackathons face difficulties due to the lack of a flexible platform. Existing tools like Unstop are built for massive organizations, offering limited control over pricing, rules, and structure. Build a fully customizable event management platform that allows students to independently control and manage their events—including custom registration fees, personalized rules, and seamless planning—all in one efficient hub.",
+    features: [
+      "Custom event setup with personalized rules & shareable links",
+      "Flexible registration charges & custom payment methods",
+      "Unified dashboard for participant management & event analytics",
+    ],
+    color: "#06b6d4", 
+  },
 
   // ── Data Science ───────────────────────────────────────────────
   {
     title: "NakaAnalytics",
-    code: "PS-05",
+    code: "TGPDS-07",
     domain: "Data Science",
     description:
       "Traffic police nakas operate on instinct — no data on which checkpoints catch the most violations at what times. Using synthetic naka check data (vehicle type, time, violation type, GPS), build a predictive deployment model that recommends optimal naka locations and shift timings to maximise violation detection.",
@@ -71,7 +97,7 @@ const dataToShow = [
   },
   {
     title: "SheepOrSleep",
-    code: "PS-06",
+    code: "TGPDS-08",
     domain: "Data Science",
     description:
       "Mutual fund and SIP investors in India panic-sell during market dips, following herd behaviour at significant financial cost. Using historical NAV data and retail investor flows, build a behavioural bias detector that identifies panic-selling patterns and visualises what disciplined investors gained vs. panic sellers over the same period.",
@@ -84,7 +110,7 @@ const dataToShow = [
   },
   {
     title: "WaterWatch",
-    code: "PS-07",
+    code: "TGPDS-09",
     domain: "Data Science",
     description:
       "Municipal water supply in Indian cities is irregular, uneven, and untracked at ward level. Using synthetic supply schedule data, complaint logs, and ward-level population density, build a water scarcity forecasting model that predicts which wards will face shortage next week and surfaces root cause indicators.",
@@ -97,7 +123,7 @@ const dataToShow = [
   },
   {
     title: "ExamStress Index",
-    code: "PS-08",
+    code: "TGPDS-10",
     domain: "Data Science",
     description:
       "College exam seasons spike student mental health crises but no data-driven early warning exists. Using anonymised synthetic data — library occupancy, portal login times, canteen footfall, health centre visits — build a campus stress index model that detects pre-exam burnout hotspots and recommends optimal intervention timing for counsellors.",
@@ -111,21 +137,8 @@ const dataToShow = [
 
   // ── AI / ML ────────────────────────────────────────────────────
   {
-    title: "SilentSOS",
-    code: "PS-09",
-    domain: "AI / ML",
-    description:
-      "Elderly people living alone often cannot call for help during a fall or cardiac event. Build an AI-powered ambient audio monitor that runs passively on a phone or tablet, detecting distress sounds — unusual silence after movement, falls, laboured breathing — and automatically alerts a registered family member with timestamp and audio clip.",
-    features: [
-      "Real-time ambient sound event detection",
-      "Instant family alert with timestamp & audio clip",
-      "False positive suppression via contextual time patterns",
-    ],
-    color: "#f97316",
-  },
-  {
     title: "CourtScribe",
-    code: "PS-10",
+    code: "TGPDS-11",
     domain: "AI / ML",
     description:
       "Indian district courts still use longhand transcription, causing delays and errors in FIRs and hearing records. Build an AI court transcription assistant that accepts audio input of a legal deposition, transcribes it in real-time, auto-tags speaker roles (judge, advocate, witness), and formats output into a structured legal document.",
@@ -138,7 +151,7 @@ const dataToShow = [
   },
   {
     title: "GrainGuard",
-    code: "PS-11",
+    code: "TGPDS-12",
     domain: "AI / ML",
     description:
       "Warehouse managers at food storage corporations visually inspect grain sacks for infestation and spoilage — unreliable and slow. Build a computer vision model trained to detect moisture damage, pest infestation, and mould growth from grain sack images, generating a shelf-life risk report per batch.",
@@ -151,7 +164,7 @@ const dataToShow = [
   },
   {
     title: "MoodMentor",
-    code: "PS-12",
+    code: "TGPDS-13",
     domain: "AI / ML",
     description:
       "College students avoid counsellors due to stigma but willingly journal anonymously. Build an AI journaling companion that tracks emotional tone over time, detects sustained negative spirals (not one-off bad days), and — only when a threshold is crossed — gently suggests professional help with opt-in campus resources.",
@@ -162,11 +175,24 @@ const dataToShow = [
     ],
     color: "#ec4899",
   },
+  {
+    title: "AudioAuth",
+    code: "TGPDS-14",
+    domain: "AI / ML",
+    description:
+      "With the rapid rise of AI-generated voices, distinguishing between real and synthetic audio is critical for security. Build a robust API-driven solution that analyzes Base64-encoded MP3 voice samples in multiple languages (Tamil, English, Hindi, Malayalam, Telugu) and accurately classifies them as human or AI-generated to prevent fraud and verify media authenticity.",
+    features: [
+      "Multi-language voice classification (Tamil, English, Hindi, Malayalam, Telugu)",
+      "API-driven Base64 audio processing",
+      "Structured JSON output with confidence score & reasoning",
+    ],
+    color: "#a855f7",
+  },
 
   // ── Blockchain ─────────────────────────────────────────────────
   {
     title: "TrustBite",
-    code: "PS-13",
+    code: "TGPDS-15",
     domain: "Blockchain",
     description:
       "Food adulteration in milk, spices, and edible oils is rampant in India with no consumer-facing traceability. Build a farm-to-shelf supply chain tracker on blockchain where each food batch gets a digital passport — recording source farm, processing unit, lab tests, and transport — accessible via QR scan at point of purchase.",
@@ -179,7 +205,7 @@ const dataToShow = [
   },
   {
     title: "DAOVoice",
-    code: "PS-14",
+    code: "TGPDS-16",
     domain: "Blockchain",
     description:
       "Resident Welfare Associations collect maintenance funds but residents have zero transparent say in how it's spent. Build a decentralised community treasury system where each flat owner holds governance tokens, spending proposals are submitted on-chain, and funds are released only when a quorum approves via smart contract.",
@@ -192,7 +218,7 @@ const dataToShow = [
   },
   {
     title: "MediProof",
-    code: "PS-15",
+    code: "TGPDS-17",
     domain: "Blockchain",
     description:
       "Counterfeit medicines cause preventable deaths across India, yet pharmacists have no real-time batch verification tool. Build a blockchain-based drug verification system where manufacturers register every batch on-chain with ingredient details and expiry, enabling pharmacists and patients to verify legitimacy via QR scan — flagging recalled or unregistered batches instantly.",
