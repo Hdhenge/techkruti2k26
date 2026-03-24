@@ -12,7 +12,7 @@ const navLinks = [
   { name: "About",          path: "/about",     icon: <Info size={15} /> },
   { name: "Gallery",        path: "/gallery",   icon: <BookImage size={15} /> },
   { name: "Contact",        path: "/contact",   icon: <Contact size={15} /> },
-  // { name: "Register Problem", path: "/ProblemForm", icon: <Code2 size={15} /> },
+  { name: "Register Problem", path: "/ProblemForm", icon: <Code2 size={15} /> },
 ];
 
 const Navbar = () => {
