@@ -36,7 +36,7 @@ const events = [
     contacts: [
       { name: "Aditya Korde",     phone: "+91 8446950836" },
       { name: "Aniket Kadu",      phone: "+91 8767158314" },
-      { name: "Chhagan Rakhade",  phone: "+9 19158396794" },
+      { name: "Chhagan Rakhade",  phone: "+91 9158396794" },
       { name: "Himanshu Dhenge",  phone: "+91 9322913858" },
     ],
   },
@@ -95,7 +95,7 @@ const events = [
           "",
           "💡 Why Participate?",
           "- Compete with skilled gamers",
-          "- Win prizes and trophies",
+          "- Win prizes up to ₹15,000 and trophies",
           "- Experience competitive gaming",
         ],
       },
