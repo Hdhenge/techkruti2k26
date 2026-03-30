@@ -97,6 +97,8 @@ const events = [
           "- Compete with skilled gamers",
           "- Win prizes up to ₹15,000 and trophies",
           "- Experience competitive gaming",
+          "",
+          "⚠️ Note: The total prize pool is up to ₹15,000 for both BGMI and Free Fire. Flyers are editable, so any misinformation regarding the prize pool will not be considered.",
         ],
       },
     ],
@@ -255,22 +257,27 @@ const renderLine = (line, i) => {
   if (line === "") return <div key={i} style={{ height: 12 }} />;
   const isBullet = line.startsWith("- ");
   const isHeader = line.match(/^[🚀💡🎯🔥🎮💻🎤🎬🧩]/u);
+  const isWarning = line.startsWith("⚠️ Note:");
+  
   return (
     <p
       key={i}
       style={{
-        fontSize: "clamp(13px, 2.4vw, 15px)",
-        color: isHeader
+        fontSize: isWarning ? "clamp(12px, 2.2vw, 14px)" : "clamp(13px, 2.4vw, 15px)",
+        color: isWarning
+          ? "#ef4444"
+          : isHeader
           ? "rgba(255,255,255,0.75)"
           : isBullet
           ? "rgba(255,255,255,0.45)"
           : "rgba(255,255,255,0.5)",
-        fontWeight: isHeader ? 700 : 400,
+        fontWeight: isWarning ? 600 : isHeader ? 700 : 400,
         letterSpacing: isHeader ? "0.08em" : "0.03em",
         lineHeight: 1.75,
         paddingLeft: isBullet ? 16 : 0,
         fontFamily: "'Rajdhani', sans-serif",
         marginBottom: 2,
+        marginTop: isWarning ? 12 : 0,
       }}
     >
       {isBullet ? `→ ${line.slice(2)}` : line}
