@@ -514,7 +514,7 @@ const Footer = () => {
             <div className="ft-copy">
               <p className="ft-copy-main">© 2026 TechKruti · TGPCET Mohgaon</p>
               <p className="ft-copy-sub">
-                Developed with <span className="ft-copy-heart">♥</span> by TechKruti Dev Team
+                Developed with <span className="ft-copy-heart">♥</span> by Himanshu Dhenge
               </p>
             </div>
 
